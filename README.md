@@ -9,9 +9,11 @@ Criando uma lista encadeada com tipos genéricos usando ponteiro ``*`` e utiliza
 ---
 
 ~~~ c/c++
+
 // Estrutura da lista encadeada. 
   typedef struct LISTA{
     int valor;
     struct LISTA * proximo;
   }Lista;
+
 ~~~
