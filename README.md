@@ -14,15 +14,4 @@ Criando uma lista encadeada com tipos genéricos usando ponteiro ``*`` e utiliza
     int valor;
     struct LISTA * proximo;
   }Lista;
-  // Inicia a lista com um valor nulo.
-  Lista * inicia(){
-    return NULL;
-  }
-  // Insere um valor inteiro na lista.
-  Lista * insereLista(Lista * list, int valor){
-     Lista* nova = (Lista*) malloc(sizeof(Lista));
-     nova->valor = valor;
-     nova->proximo = list;
-     return nova;
-  }
 ~~~
