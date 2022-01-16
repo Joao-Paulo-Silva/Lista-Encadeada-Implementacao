@@ -8,7 +8,7 @@ typedef struct DATAVALIDADE{
   
   unsigned int dia;
   unsigned int mes;
-  unsigned int Ano;
+  unsigned int ano;
 
 } Validade;
 
@@ -16,10 +16,10 @@ typedef struct PRODUTO{
   char nome[50];
   float preco;
   char codigo[8];
-  Validade dataValidade;  
+  Validade * dataValidade;  
 }Produto;
 
-Produto * iniciaProduto(char nome[50], float preco, char codigo[8], Validade data);
+Produto * iniciaProduto(char nome[50], float preco, char codigo[8], Validade * data);
 
 Validade * insereDataValidade(unsigned int dia, unsigned int Mes, unsigned int Ano);
 
