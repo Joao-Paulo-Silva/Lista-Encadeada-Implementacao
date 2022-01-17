@@ -4,7 +4,7 @@ Usuario *alocaUsuario(){
   return novoUsuario;
 }
 Usuario * iniciaUsuario(char * nome, char * email, unsigned int idade, char * cpf){
-  Usuario * novoUsuario;
+  Usuario * novoUsuario = alocaUsuario();
   strcpy(novoUsuario->nome, nome);
   strcpy(novoUsuario->email, email);
   novoUsuario->idade = idade;

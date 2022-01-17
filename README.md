@@ -25,7 +25,7 @@ O ``struct LISTA * proximo;`` armazena o endereço do próximo nó da lista.
 
 ## Exemplo utilizado neste projeto:
 
-Neste projeto será criado 2 lista encadeada usando a lista genérica que se encontra na pasta ``lib/lista.h & .c``. As lista serão criadas com dois ``typedef struct``, denominados como ``Produto`` e ``Usuario``.
+Neste projeto será criado 2 lista encadeada usando a lista genérica que se encontra na pasta ``lista/lista.h & .c``. As lista serão criadas com dois ``typedef struct``, denominados como ``Produto`` e ``Usuario``.
 
 ### Generalização dos tipos para armazenar na lista:
 

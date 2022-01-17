@@ -4,7 +4,7 @@
 
 int main(void) {
   unsigned int opcao;
-  int sizeProdutos = 0;
+  int sizeProdutos = 0, sizeUsuarios = 0;
   Lista * listaProdutos = iniciaLista();
   Lista * listaUsuarios = iniciaLista();
   
@@ -30,12 +30,31 @@ int main(void) {
            break;
           case 2:
             system("clear");
-            printProduto(listaProdutos, sizeProdutos);
+            printProdutos(listaProdutos, sizeProdutos);
           break;
         }
       break;
       case 2:
         opcao = usuarioMenu();
+        switch(opcao){
+          case 1:
+            while(1){
+                sizeUsuarios++;
+                listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
+                getchar();
+                printf("\n[ENTER] Para finalizar a inserção!");
+                char caracter = getchar();
+
+                if(caracter == '\n'){
+                  break;
+                }
+              }
+          break;
+          case 2:
+            system("clear");
+            printUsuarios(listaUsuarios, sizeUsuarios);
+          break;
+        }
       break;
       case 3:
         if(listaProdutos != NULL)

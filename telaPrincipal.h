@@ -14,5 +14,6 @@ unsigned int usuarioMenu();
 Produto * inserirProduto();
 Usuario * inserirUsuario();
 
-void printProduto(Lista *listaProdutos, int sizeProdutos);
+void printProdutos(Lista *listaProdutos, int sizeProdutos);
+void printUsuarios(Lista *listaUsuarios, int sizeUsuarios);
 #endif /*TELAPRINCIPAL_H*/
