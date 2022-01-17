@@ -8,7 +8,6 @@ typedef struct LISTA{
   
   void * tipoGenerico;
   struct LISTA * proximo;
-
 }Lista;
 
 // Retorna uma lista com valor nulo.

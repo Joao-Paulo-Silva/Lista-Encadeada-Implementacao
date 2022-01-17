@@ -7,18 +7,16 @@ Criando uma lista encadeada com tipos genéricos usando ponteiro ``*`` e utiliza
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
 
 ![alt text](img/listaEncadeada.svg)
-**Exemplo de ``struct`` `para lista encadeada com inteiros:**
+**Exemplo de ``struct`` para lista encadeada com inteiros:**
 
 ---
 
 ~~~ c/c++
-
 // Estrutura da lista encadeada. 
   typedef struct LISTA{
     int valor;
     struct LISTA * proximo;
   }Lista;
-
 ~~~
 
 O ``struct LISTA * proximo;`` armazena o endereço do próximo nó da lista.

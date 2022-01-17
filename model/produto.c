@@ -1,6 +1,9 @@
 #include "produto.h"
-
-Produto * iniciaProduto(char nome[50], float preco, char codigo[8], Validade * data){
+Produto * alocaProduto(){
+  Produto * novoProduto = (Produto*) malloc(sizeof(Produto));
+  return novoProduto;
+}
+Produto * iniciaProduto(char nome[50], float preco, char codigo[8], Validade data){
   Produto * novoProduto;
   strcpy(novoProduto->nome, nome);
   strcpy(novoProduto->codigo, codigo);
@@ -10,7 +13,7 @@ Produto * iniciaProduto(char nome[50], float preco, char codigo[8], Validade * d
 }
 
 Validade * insereDataValidade(unsigned int dia, unsigned int mes, unsigned int ano){
-  Validade *data;
+  Validade * data;
   data->dia = dia;
   data->mes = mes;
   data->ano = ano;

@@ -1,5 +1,5 @@
-#ifndef USUARIO_H
-#define USUARIO_H
+#ifndef  USUARIO_H
+#define  USUARIO_H
 
 #include <stdlib.h>
 #include <string.h>
@@ -10,7 +10,7 @@ typedef struct USUARIO{
   unsigned int idade;
   char cpf[10];
 }Usuario;
-
+Usuario *alocaUsuario();
 Usuario * iniciaUsuario(char * nome, char * email, unsigned int idade, char * cpf);
 
 #endif /*USUARIO_H*/

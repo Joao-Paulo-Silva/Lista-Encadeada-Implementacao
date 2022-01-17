@@ -1,5 +1,8 @@
 #include "usuario.h"
-
+Usuario *alocaUsuario(){
+  Usuario * novoUsuario = (Usuario*) malloc(sizeof(Usuario));
+  return novoUsuario;
+}
 Usuario * iniciaUsuario(char * nome, char * email, unsigned int idade, char * cpf){
   Usuario * novoUsuario;
   strcpy(novoUsuario->nome, nome);
