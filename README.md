@@ -45,3 +45,11 @@ Para adicionar valores a lista será utilizado uma variável auxiliar do tipo ``
 ~~~
 
 Com isso no primeiro nó inserido na lista seu próximo apontará para um valor nulo(``NULL``). Sendo utilizado para verificar o final da lista nas interações utilizadas na lista como por exemplo deletar a lista ou mostrar os dados armazenados.
+
+#### Exemplo de uma lista encadeada armazenando dados:
+
+| Posição ao inserir:  |      5      |      4      |      3      |      2      |      1      |
+|:--------------------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+|         Dados:       | ``valor5``  | ``valor4``  | ``valor3``  | ``valor2``  |  ``valor1`` |
+| Endereço do próximo: | ``&valor4`` | ``&valor3`` | ``&valor2`` | ``&valor1`` |  ``NULL``   |
+|  Posição na lista:   |      0      |      1      |       2     |      3      |      4      |
