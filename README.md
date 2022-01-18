@@ -5,6 +5,7 @@ Este projeto demonstra a criação e utilização de uma lista encadeada para ti
 
 A lista encadeada com tipos genéricos usa ponteiro ``*`` e utilizando bibliotecas customizadas ``Exemplo.h``, para uma melhor organização do algoritmo.
 
+### Lista Encadeada:
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
 
 ![alt text](img/listaEncadeada.svg)
@@ -12,7 +13,7 @@ A lista encadeada é uma lista, no qual o último item inserido torna-se o prime
 
 ---
 
-~~~ c/c++
+~~~	c/c++
 // Estrutura da lista encadeada. 
   typedef struct LISTA{
     int valor;
@@ -24,7 +25,7 @@ O ``struct LISTA * proximo;`` armazena o endereço do próximo nó da lista.
 
 ---
 
-## Exemplo utilizado neste projeto:
+### Exemplo utilizado neste projeto:
 
 Neste projeto será criado 2 lista encadeada usando a lista genérica que se encontra na pasta ``lista/lista.h`` e ``lista/lista.c``. As lista serão criadas com dois ``typedef struct``, denominados como ``Produto`` e ``Usuario``.
 
@@ -53,3 +54,26 @@ Com isso no primeiro nó inserido na lista seu próximo apontará para um valor 
 |         Dados:       | ``valor5``  | ``valor4``  | ``valor3``  | ``valor2``  |  ``valor1`` |
 | Endereço do próximo: | ``&valor4`` | ``&valor3`` | ``&valor2`` | ``&valor1`` |  ``NULL``   |
 |  Posição na lista:   |      0      |      1      |       2     |      3      |      4      |
+
+
+---
+
+### Percorrendo a lista:
+
+Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armazenar os nós atuais.
+
+#### Exemplo:
+~~~ c/c++
+	int percorrendoLista(Lista * lista, int i){
+		aux = lista;
+		int posicao = 0;
+		while(aux != NULL){
+			if(posicao == i){
+				return lista->valor;
+			}
+			aux = aux->proximo;
+		}
+		printf("Posição inválida.");
+		return NULL;
+	}
+	
