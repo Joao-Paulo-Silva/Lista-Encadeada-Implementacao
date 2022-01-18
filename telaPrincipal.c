@@ -6,6 +6,7 @@ void positionPrint(int x,  int y){
 
 // Menu inicial do projeto
 unsigned int menuInicial(){
+	setbuf(stdin, NULL);
   unsigned int opcao;
   system("clear");
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
@@ -23,6 +24,7 @@ unsigned int menuInicial(){
 
 // Menu para ações relacionadas aos produtos.
 unsigned int produtoMenu(){
+	setbuf(stdin, NULL);
   unsigned int opcao;
   system("clear");
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
@@ -41,6 +43,7 @@ unsigned int produtoMenu(){
 
 // Menu para ações relacionadas aos usuários.
 unsigned int usuarioMenu(){
+	setbuf(stdin, NULL);
   unsigned int opcao;
   system("clear");
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
@@ -59,7 +62,7 @@ unsigned int usuarioMenu(){
 
 // Função que pede os dados para inserir um produto, no qual retorna um Produto alocado dinamicamente.
 Produto * inserirProduto(){
-  getchar();
+  setbuf(stdin, NULL);
   Produto * produto = alocaProduto();
   Validade data;
   system("clear");
@@ -108,12 +111,13 @@ Produto * inserirProduto(){
     }else
       break;
   }
+	setbuf(stdin, NULL);
   return produto;
 }
 
 // Função que pede os dados para inserir um usuário, no qual retorna um Usuario alocado dinamicamente.
 Usuario * inserirUsuario(){
-  getchar();
+  setbuf(stdin, NULL);
   Usuario * usuario = alocaUsuario();
   Validade data;
   system("clear");
@@ -136,6 +140,7 @@ Usuario * inserirUsuario(){
   getchar();
   positionPrint(8, 7);
   scanf("%[^\n]", usuario->cpf);
+	setbuf(stdin, NULL);
   return usuario;
 }
 
@@ -171,8 +176,12 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
       positionPrint(11, 6 + posicaoY);
       printf("%s", auxP->codigo);
       positionPrint(21, 7 + posicaoY);
+			if (auxP->dataValidade.dia < 10)
+				printf("0");
       printf("%u", auxP->dataValidade.dia);
       positionPrint(24, 7 + posicaoY);
+			if (auxP->dataValidade.mes < 10)
+				printf("0");
       printf("%u", auxP->dataValidade.mes);
       positionPrint(27, 7 + posicaoY);
       printf("%u", auxP->dataValidade.ano);
@@ -231,4 +240,11 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
   positionPrint(0, 9 + posicaoY - 7);
   printf("[\x1b[32mENTER\x1b[0m] para Continuar!\n");
   getchar();
+}
+
+void printPrecioneEnter(){
+	printf("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+	       "┃    Pressione [\x1b[32mENTER\x1b[0m] para continuar       ┃\n"
+				 "┃  adicionando ou outra tecla para voltar!  ┃\n"
+				 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
 }

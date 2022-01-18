@@ -16,4 +16,6 @@ Usuario * inserirUsuario();
 
 void printProdutos(Lista *listaProdutos, int sizeProdutos);
 void printUsuarios(Lista *listaUsuarios, int sizeUsuarios);
+
+void printPrecioneEnter();
 #endif /*TELAPRINCIPAL_H*/

@@ -17,16 +17,13 @@ int main(void) {
         switch(opcao){
           case 1:
           while(1){
-              sizeProdutos++;
-              listaProdutos = addItemLista(listaProdutos, inserirProduto());
-              getchar();
-              printf("\n[ENTER] Para finalizar a inserção!");
-              char caracter = getchar();
-
-              if(caracter == '\n'){
-                break;
-              }
-            }
+						sizeProdutos++;
+						listaProdutos = addItemLista(listaProdutos, inserirProduto());
+						printPrecioneEnter();
+						if(getchar() != '\n'){
+							break;
+						}
+					}
            break;
           case 2:
             system("clear");
@@ -39,16 +36,13 @@ int main(void) {
         switch(opcao){
           case 1:
             while(1){
-                sizeUsuarios++;
-                listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
-                getchar();
-                printf("\n[ENTER] Para finalizar a inserção!");
-                char caracter = getchar();
-
-                if(caracter == '\n'){
-                  break;
-                }
+							sizeUsuarios++;
+							listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
+							printPrecioneEnter();
+						  if(getchar() != '\n'){
+                break;
               }
+            }
           break;
           case 2:
             system("clear");
