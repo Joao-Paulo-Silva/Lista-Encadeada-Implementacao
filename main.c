@@ -53,10 +53,10 @@ int main(void) {
       case 3:
         if(listaProdutos != NULL)
           deletaLista(listaProdutos);
-        if(listaProdutos != NULL)
+        if(listaUsuarios != NULL)
           deletaLista(listaUsuarios);
         positionPrint(0, 10);
-        return 0;
+        return EXIT_SUCCESS;
     }  
   }  
 }

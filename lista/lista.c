@@ -35,14 +35,11 @@ Lista * removeItemLista(Lista *lista, void * endTipo){
 // Deleta todos os itens da lista liberando da memória.
 void deletaLista(Lista *lista){
   if(lista != NULL){
-    while(1){
+    while(lista != NULL){
       Lista *aux = lista;
       lista = lista->proximo;
-      if(aux == NULL){
-        break;
-      }else{
-        free(aux);
-      }
+      if(aux != NULL)
+			  free(aux);
     }
   }
 }

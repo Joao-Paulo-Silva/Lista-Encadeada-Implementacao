@@ -189,12 +189,15 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
       posicaoY += 7;
       numProd++;
     }
-    
+		positionPrint(0, 9 + posicaoY - 7);
+  	printf("\t\t[\x1b[32mENTER\x1b[0m] para Continuar!   ");
   }else{
-    printf("Não possui produtos na lista!");
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
+					 "┃       Não possui produtos na lista!       ┃\n"
+					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
   }
-  positionPrint(0, 9 + posicaoY - 7);
-  printf("[\x1b[32mENTER\x1b[0m] para Continuar!\n");
   getchar();
 }
 // Função para printar uma lista de usuários.
@@ -206,7 +209,7 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
 
     for(int i = 0; i < sizeUsuarios; i++){
-      printf("\n┃                   USUÁRIO                 ┃"
+      printf("\n┃                 USUÁRIO                   ┃"
              "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
              "\n┃ Nome:                                     ┃"
              "\n┃ Idade:                                    ┃"
@@ -234,11 +237,16 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
       posicaoY += 7;
       numProd++;
     }
+		positionPrint(0, 9 + posicaoY - 7);
+  	printf("\t\t[\x1b[32mENTER\x1b[0m] para Continuar!   ");
   }else{
-    printf("Não possui produtos na lista!");
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
+					 "┃       Não possui usuários na lista!       ┃\n"
+					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
   }
-  positionPrint(0, 9 + posicaoY - 7);
-  printf("[\x1b[32mENTER\x1b[0m] para Continuar!\n");
+
   getchar();
 }
 
