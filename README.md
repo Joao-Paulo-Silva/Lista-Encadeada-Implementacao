@@ -63,18 +63,20 @@ Com isso no primeiro nó inserido na lista seu próximo apontará para um valor 
 Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armazenar os nós atuais.
 
 #### Exemplo:
-~~~ c/c++
-	int percorrendoLista(Lista * lista, int i){
-		aux = lista;
-		int posicao = 0;
-		while(aux != NULL){
-			if(posicao == i){
-				return lista->valor;
-			}
-			aux = aux->proximo;
-		}
-		printf("Posição inválida.");
-		return NULL;
-	}
+~~~	c/c++
+// Exemplo de função que percorre a lista.
+  int percorrendoLista(Lista * lista, int i){
+	  aux = lista;
+  	int posicao = 0;
+	  while(aux != NULL){
+		  if(posicao == i){
+			  return lista->valor;
+	  	}
+		  aux = aux->proximo;
+	  }
+	  printf("Posição inválida.");
+	  return NULL;
+  }
+	
 ~~~
 	
