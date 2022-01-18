@@ -55,7 +55,6 @@ Com isso no primeiro nó inserido na lista seu próximo apontará para um valor 
 | Endereço do próximo: | ``&valor4`` | ``&valor3`` | ``&valor2`` | ``&valor1`` |  ``NULL``   |
 |  Posição na lista:   |      0      |      1      |       2     |      3      |      4      |
 
-
 ---
 
 ### Percorrendo a lista:
@@ -76,4 +75,5 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 		printf("Posição inválida.");
 		return NULL;
 	}
+~~~
 	
