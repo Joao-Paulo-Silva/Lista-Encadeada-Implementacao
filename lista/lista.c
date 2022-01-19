@@ -14,7 +14,6 @@ Lista * addItemLista(Lista *lista, void * endTipo){
   Lista * itemNovo = alocaLista();
   itemNovo->tipoGenerico = endTipo;
   itemNovo->proximo = lista == NULL ? NULL : lista; 
-  
   return itemNovo;
 }
 // Remove um item da lista.
@@ -53,3 +52,12 @@ void deletaLista(Lista *lista){
   }
 }
 
+int length(Lista *lista){
+	Lista * aux = lista;
+	int length = 0;
+	while(aux != NULL){
+		length++;
+		aux = aux->proximo;
+	}
+	return length;
+}

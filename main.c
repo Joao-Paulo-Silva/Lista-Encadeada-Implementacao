@@ -31,6 +31,7 @@ int main(void) {
           break;
 					case 3:
 					 listaProdutos = buscaTelaProduto(listaProdutos);
+					 sizeProdutos = length(listaProdutos);
 					break;
         }
       break;
@@ -53,6 +54,7 @@ int main(void) {
           break;
 					case 3:
 					 listaUsuarios = buscaTelaProduto(listaUsuarios);
+					 sizeUsuarios = length(listaUsuarios);
 					break;
         }
       break;
