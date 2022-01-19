@@ -5,6 +5,7 @@
 #include "model/produto.h"
 #include "model/usuario.h"
 #include "lista/lista.h"
+#include "busca.h"
 
 void positionPrint(int x,  int y);
 unsigned int menuInicial();
@@ -18,4 +19,8 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos);
 void printUsuarios(Lista *listaUsuarios, int sizeUsuarios);
 
 void printPrecioneEnter();
+
+Lista * buscaTelaProduto(Lista *listaProdutos);
+Lista * buscaTelaUsuario(Lista *listaUsuarios);
+
 #endif /*TELAPRINCIPAL_H*/

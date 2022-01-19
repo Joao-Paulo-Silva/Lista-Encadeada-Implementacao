@@ -146,6 +146,7 @@ Usuario * inserirUsuario(){
 
 // Função para printar uma lista de produtos.
 void printProdutos(Lista *listaProdutos, int sizeProdutos){
+	system("clear");
   Lista * aux = listaProdutos;
   unsigned int posicaoY = 0, numProd = 1;
   getchar();
@@ -202,6 +203,7 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
 }
 // Função para printar uma lista de usuários.
 void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
+	system("clear");
   Lista * aux = listaUsuarios;
   unsigned int posicaoY = 0, numProd = 1;
   getchar();
@@ -255,4 +257,106 @@ void printPrecioneEnter(){
 	       "┃    Pressione [\x1b[32mENTER\x1b[0m] para continuar       ┃\n"
 				 "┃  adicionando ou outra tecla para voltar!  ┃\n"
 				 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+}
+
+Lista * buscaTelaProduto(Lista *listaProdutos){
+	system("clear");
+	setbuf(stdin, NULL);
+	Produto * produto;
+	unsigned int op;
+	char nome[50];
+	printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+       "\n┃                   PRODUTO                 ┃"
+       "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━┫"
+			 "\n┃ Nome:                               ┃  ⌕  ┃"
+			 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
+	positionPrint(9, 4);
+	scanf("%[^\n]", nome);
+	produto = buscaProduto(listaProdutos, nome);
+	system("clear");
+	if(produto != NULL){
+		printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+				"\n┃                   PRODUTO                 ┃"
+				"\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
+				"\n┃ Nome:                                     ┃"
+				"\n┃ Preço:                                    ┃"
+				"\n┃ Código:                                   ┃"
+				"\n┃ Data de Validade: __/__/____              ┃" 
+				"\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
+				"\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
+				"\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+      positionPrint(10, 4);
+      printf("%s", produto->nome);
+      positionPrint(10, 5 );
+      printf("%.2f", produto->preco);
+      positionPrint(11, 6 );
+      printf("%s", produto->codigo);
+      positionPrint(21, 7 );
+			if (produto->dataValidade.dia < 10)
+				printf("0");
+      printf("%u", produto->dataValidade.dia);
+      positionPrint(24, 7 );
+			if (produto->dataValidade.mes < 10)
+				printf("0");
+      printf("%u", produto->dataValidade.mes);
+      positionPrint(27, 7 );
+      printf("%u", produto->dataValidade.ano);
+			do{
+				positionPrint(0, 11);
+				printf("                                  ");
+				positionPrint(0, 11);
+				scanf("%u", &op);
+			}while(op > 2);
+			if(op == 2){
+				return removeItemLista(listaProdutos, produto);
+			}
+	}
+	return listaProdutos;
+
+}
+Lista * buscaTelaUsuario(Lista *listaUsuarios){
+	system("clear");
+	setbuf(stdin, NULL);
+	unsigned int op;
+	Usuario * usuario;
+	char nome[50];
+	printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+       "\n┃                   USUÁRIO                 ┃"
+       "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━┫"
+			 "\n┃ Nome:                               ┃  ⌕  ┃"
+			 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
+	positionPrint(9, 4);
+	scanf("%[^\n]", nome);
+	usuario = buscaUsuarios(listaUsuarios, nome);	
+	system("clear");
+	if(usuario != NULL){
+		printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+         "\n┃                   USUÁRIO                 ┃"
+         "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
+         "\n┃ Nome:                                     ┃"
+         "\n┃ Idade:                                    ┃"
+         "\n┃ E-mail:                                   ┃"
+         "\n┃ CPF:                                      ┃" 
+         "\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
+		 		 "\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
+	  		 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+		positionPrint(9, 4);
+		printf("%s", usuario->nome);
+		positionPrint(10, 5);
+		printf("%u", usuario->idade);
+		positionPrint(11, 6);
+		printf("%s", usuario->email);
+		positionPrint(8, 7);
+		printf("%s", usuario->cpf);
+		do{
+			positionPrint(0, 11);
+			printf("                                  ");
+			positionPrint(0, 11);
+			scanf("%u", &op);
+		}while(op > 2);
+		if(op == 2){
+			return removeItemLista(listaUsuarios, usuario);
+		}
+	}
+	return listaUsuarios;
 }

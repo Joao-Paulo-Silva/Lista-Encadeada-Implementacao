@@ -19,16 +19,25 @@ Lista * addItemLista(Lista *lista, void * endTipo){
 }
 // Remove um item da lista.
 Lista * removeItemLista(Lista *lista, void * endTipo){
-  Lista * anterior, *atual;
+  Lista * anterior = NULL, *atual;
   atual = lista;
   do{
-    if(atual == endTipo){
-      anterior->proximo = atual->proximo;
-      free(atual);
-    }else{
-      anterior = atual;
-      atual = atual->proximo;
-    }
+		if(atual->tipoGenerico == endTipo){
+			if(anterior == NULL){
+				if(atual->proximo == NULL)
+					return NULL;
+			 	lista = atual->proximo;
+				free(atual);
+				return lista;
+			}else{
+				anterior->proximo = atual->proximo;
+				free(atual);
+				return lista;
+			}
+		}
+		anterior = atual;
+		atual = atual->proximo;
+
   }while(atual->proximo != NULL);
   return lista;
 }

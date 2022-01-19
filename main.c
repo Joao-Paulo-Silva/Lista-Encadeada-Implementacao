@@ -29,6 +29,9 @@ int main(void) {
             system("clear");
             printProdutos(listaProdutos, sizeProdutos);
           break;
+					case 3:
+					 listaProdutos = buscaTelaProduto(listaProdutos);
+					break;
         }
       break;
       case 2:
@@ -48,6 +51,9 @@ int main(void) {
             system("clear");
             printUsuarios(listaUsuarios, sizeUsuarios);
           break;
+					case 3:
+					 listaUsuarios = buscaTelaProduto(listaUsuarios);
+					break;
         }
       break;
       case 3:
