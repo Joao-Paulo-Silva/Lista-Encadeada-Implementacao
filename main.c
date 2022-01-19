@@ -53,7 +53,7 @@ int main(void) {
             printUsuarios(listaUsuarios, sizeUsuarios);
           break;
 					case 3:
-					 listaUsuarios = buscaTelaProduto(listaUsuarios);
+					 listaUsuarios = buscaTelaUsuario(listaUsuarios);
 					 sizeUsuarios = length(listaUsuarios);
 					break;
         }

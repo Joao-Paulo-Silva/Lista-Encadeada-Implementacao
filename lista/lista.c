@@ -36,8 +36,7 @@ Lista * removeItemLista(Lista *lista, void * endTipo){
 		}
 		anterior = atual;
 		atual = atual->proximo;
-
-  }while(atual->proximo != NULL);
+  }while(atual != NULL);
   return lista;
 }
 // Deleta todos os itens da lista liberando da memória.

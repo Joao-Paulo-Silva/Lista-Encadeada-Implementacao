@@ -272,6 +272,7 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
 			 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
 	positionPrint(9, 4);
 	scanf("%[^\n]", nome);
+	setbuf(stdin, NULL);
 	produto = buscaProduto(listaProdutos, nome);
 	system("clear");
 	if(produto != NULL){
@@ -284,7 +285,7 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
 				"\n┃ Data de Validade: __/__/____              ┃" 
 				"\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
 				"\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
-				"\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+				"\n┗━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛");
       positionPrint(10, 4);
       printf("%s", produto->nome);
       positionPrint(10, 5 );
@@ -307,6 +308,7 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
 				positionPrint(0, 11);
 				scanf("%u", &op);
 			}while(op > 2);
+			setbuf(stdin, NULL);
 			if(op == 2){
 				return removeItemLista(listaProdutos, produto);
 			}
@@ -327,6 +329,7 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
 			 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
 	positionPrint(9, 4);
 	scanf("%[^\n]", nome);
+	setbuf(stdin, NULL);
 	usuario = buscaUsuarios(listaUsuarios, nome);	
 	system("clear");
 	if(usuario != NULL){
@@ -339,7 +342,7 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
          "\n┃ CPF:                                      ┃" 
          "\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
 		 		 "\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
-	  		 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+	  		 "\n┗━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛");
 		positionPrint(9, 4);
 		printf("%s", usuario->nome);
 		positionPrint(10, 5);
@@ -354,6 +357,7 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
 			positionPrint(0, 11);
 			scanf("%u", &op);
 		}while(op > 2);
+		setbuf(stdin, NULL);
 		if(op == 2){
 			return removeItemLista(listaUsuarios, usuario);
 		}
