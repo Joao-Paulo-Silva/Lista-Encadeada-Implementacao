@@ -203,11 +203,12 @@ With that in the first node inserted in the list its next one will point to a nu
 
 #### Example of a linked list storing data:
 
-| Position when inserting: | 5 | 4 | 3 | 2 | 1 |
+| Position when inserting: |     5   |      4       |     3       |      2      |      1      |
 |:--------------------:|:-----------:|:----------- :|:-----------:|:-----------:|:-----------:|
-| Data: | ``value5`` | ``value4`` | ``value3`` | ``value2`` | ``value1`` |
-| Next Address: | ``&value4`` | ``&value3`` | ``&value2`` | ``&value1`` | ``NULL`` |
-| List position: | 0 | 1 | 2 | 3 | 4 |
+|        Data:         | ``value5``  | ``value4``   |  ``value3`` | ``value2``  |  ``value1`` |
+|     Next Address:    | ``&value4`` | ``&value3``  | ``&value2`` | ``&value1`` |    ``NULL`` |
+|    List position:    |      0      |       1      |       2     |      3      |       4     |
+
 
 ---
 
