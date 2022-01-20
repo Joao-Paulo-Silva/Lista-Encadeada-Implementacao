@@ -16,7 +16,7 @@ A lista encadeada é uma lista, no qual o último item inserido torna-se o prime
 
 ---
 
-```c/c++
+```C/C++
 // Estrutura da lista encadeada. 
   typedef struct LISTA{
     int valor;
@@ -42,7 +42,7 @@ Para armazenar os dados na lista de forma genérica, os dados serão armazenados
 
 Para adicionar valores a lista será utilizado uma variável auxiliar do tipo ``Lista`` para armazenar o início da lista atual. Para encadear a lista é necessário salvar o nó atual antes de atualizar o primeiro da lista. Exemplo:
 
-```c/c++
+```C/C++
   Lista * aux = listaAtual;
   listaAtual = novoNó;
   listaAtual->proximo = aux;
@@ -65,7 +65,7 @@ Com isso no primeiro nó inserido na lista seu próximo apontará para um valor 
 Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armazenar os nós atuais.
 
 #### Exemplo:
-```c/c++
+```C/C++
 // Exemplo de função que percorre a lista.
   int percorrendoLista(Lista * lista, int i){
 	  aux = lista;
