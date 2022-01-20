@@ -81,30 +81,46 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
   }
 ```
 
-#### Telas do projeto
+#### **Telas do projeto**
 ##### **Menu Inicial:**
-<p align = center>
 
 ![alt text ><](img/menuInicial.png)
-
-<p>
 
 --- 
 
 ##### **Menus dos tipos usados, ``Produto`` e ``Usuario``:**
-<p align = center>
 
 ![alt text ><](img/menusDosTipos.png)
-
-<p>
 
 ---
 
 ##### **Inserir Informações dos ``Produtos`` e ``Usuarios``:**
-<p align = center>
-
 ![alt text ><](img/inserirDados.png)
 
-<p>
+###### Exemplo dos menus após inserir:
+
+![alt text ><](img/inserirDadosValores.png)
 
 ---
+
+##### **Mostrando todos os dados da lista:**
+
+![alt text ><](img/mostraDados.png)
+
+---
+
+##### **Telas de pesquisas:**
+
+![alt text ><](img/pesquisas.png)
+
+---
+
+##### **Telas dos resultados das pesquisas:**
+
+![alt text ><](img/resultadosPesquisa.png)
+
+---
+
+### Conclusão:
+
+A utilização de lista encadeada, ao contrário de vetores, oferece a opção de armazenar os dados de forma dinâmica. Ao contrário de um vetor uma quantidade de dados pré-definida antes de inserir os dados limitando a quantidade ao valor dado para a variável. Exemplo: ``int vetor[10]``, sendo possível armazenar apenas 10 valores, não podendo ser modificado após definir a quantidade de dados do vetor.
