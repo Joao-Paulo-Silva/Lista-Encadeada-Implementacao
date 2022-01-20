@@ -88,11 +88,15 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 
 ![alt text ><](img/menuInicial.png)
 
+No menu inicial o usuário pode decidir selecionar produtos, usuários ou sair. 
+
 --- 
 
 ##### **Menus dos tipos usados, ``Produto`` e ``Usuario``:**
 
 ![alt text ><](img/menusDosTipos.png)
+
+Nesses menus o usuário pode decidir por inserir, mostrar todos os dados, pesquisar ou voltar ao menu inicial. 
 
 ---
 
@@ -100,9 +104,14 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 
 ![alt text ><](img/inserirDados.png)
 
+Nessas telas o usuário insere os dados de cada tipo.
+
+
 ###### Exemplo dos menus após inserir:
 
 ![alt text ><](img/inserirDadosValores.png)
+
+Após inserir o usuário pode continuar inserindo ou voltar ao menu inicial.
 
 ---
 
@@ -110,17 +119,23 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 
 ![alt text ><](img/mostraDados.png)
 
+Mostra todos os dados contidos na lista.
+
 ---
 
 ##### **Telas de pesquisas:**
 
 ![alt text ><](img/pesquisas.png)
 
+Nessas telas o usuário pode informar um nome para efetuar a pesquisa.
+
 ---
 
 ##### **Telas dos resultados das pesquisas:**
 
 ![alt text ><](img/resultadosPesquisa.png)
+
+A tela de resultados mostra as informações encontradas e oferece opção para deletar o dado da lista.
 
 ---
 

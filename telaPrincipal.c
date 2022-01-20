@@ -1,10 +1,11 @@
 #include "telaPrincipal.h"
 
+// Função para posicionar o ponteiro na tela do terminal, para efetuar os prints sem apagar a tela.
 void positionPrint(int x,  int y){
   printf("\033[%d;%dH", y, x);
 }
 
-// Menu inicial do projeto
+// Menu inicial do projeto.
 unsigned int menuInicial(){
 	setbuf(stdin, NULL);
   unsigned int opcao;
@@ -22,7 +23,7 @@ unsigned int menuInicial(){
   return opcao;
 }
 
-// Menu para ações relacionadas aos produtos.
+// Menu para gerenciar a lista de produtos.
 unsigned int produtoMenu(){
 	setbuf(stdin, NULL);
   unsigned int opcao;
@@ -41,7 +42,7 @@ unsigned int produtoMenu(){
   return opcao;
 }
 
-// Menu para ações relacionadas aos usuários.
+// Menu para gerenciar a lista de usuários.
 unsigned int usuarioMenu(){
 	setbuf(stdin, NULL);
   unsigned int opcao;
@@ -252,12 +253,14 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
   getchar();
 }
 
+// Função printar a opção na tela de inserir após ter inserido os dados.
 void printPrecioneEnter(){
 	printf("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
 	       "┃    Pressione [\x1b[32mENTER\x1b[0m] para continuar       ┃\n"
 				 "┃  adicionando ou outra tecla para voltar!  ┃\n"
 				 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
 }
+
 
 Lista * buscaTelaProduto(Lista *listaProdutos){
 	system("clear");

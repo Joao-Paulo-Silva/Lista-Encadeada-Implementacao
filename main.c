@@ -2,6 +2,7 @@
 #include "lista/lista.h"
 #include "telaPrincipal.h"
 
+// Main iniciar o programa chamando as funções.
 int main(void) {
   unsigned int opcao;
   int sizeProdutos = 0, sizeUsuarios = 0;

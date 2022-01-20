@@ -1,5 +1,6 @@
 #include "busca.h"
 
+// Função buscaProduto retorna um  endereço de um Produto, se encontrado na lista de produtos a partir do nome.
 Produto * buscaProduto(Lista * listaProdutos, char * nome){
 Lista * aux = listaProdutos;
 	while(aux != NULL){

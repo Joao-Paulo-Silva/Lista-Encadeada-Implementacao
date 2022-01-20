@@ -20,6 +20,7 @@ Lista * addItemLista(Lista *lista, void * endTipo);
 Lista * removeItemLista(Lista *lista, void * endTipo);
 // Deleta todos os itens da lista liberando da memória.
 void deletaLista(Lista *lista);
+// Função length retorna a quantidade de nós da lista.
 int length(Lista *lista);
 
 #endif  /*LISTA_H*/
