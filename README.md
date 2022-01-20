@@ -209,7 +209,6 @@ With that in the first node inserted in the list its next one will point to a nu
 |     Next Address:    | ``&value4`` | ``&value3``  | ``&value2`` | ``&value1`` |    ``NULL`` |
 |    List position:    |      0      |       1      |       2     |      3      |       4     |
 
-
 ---
 
 ### Cycling through the list:
@@ -254,7 +253,7 @@ In these menus the user can decide to enter, show all data, search or return to 
 
 ##### **Insert ``Products`` and ``Users`` Information:**
 
-![alt text ><](img/insertData.png)
+![alt text ><](img/inserirDados.png)
 
 In these screens, the user enters the data of each type.
 
