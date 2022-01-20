@@ -9,12 +9,12 @@ A lista encadeada com tipos genéricos usa ponteiro ``*`` e utilizando bibliotec
 ### Lista Encadeada:
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
 
-![alt text](img/listaEncadeada.svg)
+![alt text ><](img/listaEncadeada.svg)
 **Exemplo de ``struct`` para lista encadeada com inteiros:**
 
 ---
 
-```	c/c++
+```c/c++
 // Estrutura da lista encadeada. 
   typedef struct LISTA{
     int valor;
@@ -40,7 +40,7 @@ Para armazenar os dados na lista de forma genérica, os dados serão armazenados
 
 Para adicionar valores a lista será utilizado uma variável auxiliar do tipo ``Lista`` para armazenar o início da lista atual. Para encadear a lista é necessário salvar o nó atual antes de atualizar o primeiro da lista. Exemplo:
 
-``` c/c++
+```c/c++
   Lista * aux = listaAtual;
   listaAtual = novoNó;
   listaAtual->proximo = aux;
@@ -63,7 +63,7 @@ Com isso no primeiro nó inserido na lista seu próximo apontará para um valor 
 Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armazenar os nós atuais.
 
 #### Exemplo:
-```	c/c++
+```c/c++
 // Exemplo de função que percorre a lista.
   int percorrendoLista(Lista * lista, int i){
 	  aux = lista;
@@ -84,17 +84,17 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 
 ##### **Menu Inicial:**
 
-![Menu Inicial](img/menuInicial.png)
+![alt text ><](img/menuInicial.png)
 
 --- 
 
 ##### **Menus dos tipos usados, ``Produto`` e ``Usuario``:**
 
-![](img/menusDosTipos.png)
+![alt text ><](img/menusDosTipos.png)
 
 ---
 ##### **Inserir Informações dos ``Produtos`` e ``Usuarios``:**
 
-![](img/inserirDados.png)
+![alt text ><](img/inserirDados.png)
 
 ---
