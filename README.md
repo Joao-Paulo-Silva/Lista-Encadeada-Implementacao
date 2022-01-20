@@ -183,7 +183,7 @@ The ``LIST *next;`` struct stores the address of the next node in the list.
 
 ### Example used in this project:
 
-In this project, 2 linked lists will be created using the generic list found in the folders ``lista/lista.h`` and ``lista/lista.c``. The lists will be created with two ``typedef struct``, named as ``Product`` and ``User``.
+In this project, 2 linked lists will be created using the generic list found in the folders ``lista/lista.h`` and ``lista/lista.c``. The lists will be created with two ``typedef struct``, named as ``Produto`` e ``Usuario``.
 
 ### Generalization of types to store in the list:
 
@@ -246,7 +246,7 @@ From the home menu the user can decide to select products, users or exit.
 
 ---
 
-##### **Menus of the types used, ``Product`` and ``User``:**
+##### **Menus of the types used, ``Produto`` e ``Usuario``:**
 
 ![alt text ><](img/menusDosTipos.png)
 
@@ -254,7 +254,7 @@ In these menus the user can decide to enter, show all data, search or return to 
 
 ---
 
-##### **Insert ``Products`` and ``Users`` Information:**
+##### **Insert ``Produto` e ``Usuario`` Information:**
 
 ![alt text ><](img/inserirDados.png)
 
