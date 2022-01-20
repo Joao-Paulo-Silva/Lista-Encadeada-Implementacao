@@ -8,8 +8,10 @@ A lista encadeada com tipos genéricos usa ponteiro ``*`` e utilizando bibliotec
 
 ### Lista Encadeada:
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
+<p align = center> 
 
-![alt text ><](img/listaEncadeada.svg)
+![alt text ><](img/listaEncadeada.svg) <p>
+
 **Exemplo de ``struct`` para lista encadeada com inteiros:**
 
 ---
@@ -83,18 +85,27 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 #### Telas do projeto
 
 ##### **Menu Inicial:**
+<p align = center>
 
 ![alt text ><](img/menuInicial.png)
+
+<p>
 
 --- 
 
 ##### **Menus dos tipos usados, ``Produto`` e ``Usuario``:**
+<p align = center>
 
 ![alt text ><](img/menusDosTipos.png)
 
+<p>
+
 ---
+
 ##### **Inserir Informações dos ``Produtos`` e ``Usuarios``:**
+<p align = center>
 
 ![alt text ><](img/inserirDados.png)
 
+<p>
 ---
