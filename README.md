@@ -6,6 +6,8 @@
 
 2.  [English](#English)
 
+
+
 ## Português
 #### ``@author João Paulo``, Link para executar o projeto no [replit.com](https://replit.com/@JooPaulodaSilv1/ListaEncadeadaExemplo).
 
@@ -203,12 +205,11 @@ With that in the first node inserted in the list its next one will point to a nu
 
 #### Example of a linked list storing data:
 
-
-| Position when inserting: |      5      |      4       |     3       |      2      |      1      |
-|:------------------------:|:-----------:|:----------- :|:-----------:|:-----------:|:-----------:|
-|            Data:         | ``value5``  | ``value4``   |  ``value3`` | ``value2``  |  ``value1`` |
-|         Next Address:    | ``&value4`` | ``&value3``  | ``&value2`` | ``&value1`` |    ``NULL`` |
-|        List position:    |      0      |       1      |       2     |      3      |       4     |
+| Position when inserting:  |      5      |      4      |      3      |      2      |      1      |
+|:--------------------:|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+|         Data:       | ``value5``  | ``value4``  | ``value3``  | ``value2``  |  ``value1`` |
+| Next Address: | ``&value4`` | ``&value3`` | ``&value2`` | ``&value1`` |  ``NULL``   |
+|  List position:   |      0      |      1      |       2     |      3      |      4      |
 
 
 ---
@@ -221,16 +222,16 @@ To traverse the list, we use a loop and an auxiliary variable to store the curre
 ```C
 // Example of function that traverses the list.
   int traversingList(List * list, int i){
-aux = list;
-  int position = 0;
-while(aux != NULL){
-if(position == i){
-return list->value;
-}
-aux = aux->next;
-}
-printf("Invalid position.");
-return NULL;
+		aux = list;
+		int position = 0;
+		while(aux != NULL){
+			if(position == i){
+				return list->value;
+			}
+			aux = aux->next;
+		}
+		printf("Invalid position.");
+		return NULL;
   }
 ```
 
