@@ -221,18 +221,18 @@ To traverse the list, we use a loop and an auxiliary variable to store the curre
 #### Example:
 ```C
 // Example of function that traverses the list.
-  int traversingList(List * list, int i){
-		aux = list;
-		int position = 0;
-		while(aux != NULL){
-			if(position == i){
-				return list->value;
-			}
-			aux = aux->next;
+int traversingList(List * list, int i){
+	aux = list;
+	int position = 0;
+	while(aux != NULL){
+		if(position == i){
+			return list->value;
 		}
-		printf("Invalid position.");
-		return NULL;
-  }
+		aux = aux->next;
+	}
+	printf("Invalid position.");
+	return NULL;
+}
 ```
 
 #### **Project Screens**
