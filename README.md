@@ -82,6 +82,8 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 ```
 
 #### **Telas do projeto**
+
+
 ##### **Menu Inicial:**
 
 ![alt text ><](img/menuInicial.png)
@@ -95,6 +97,7 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 ---
 
 ##### **Inserir Informações dos ``Produtos`` e ``Usuarios``:**
+
 ![alt text ><](img/inserirDados.png)
 
 ###### Exemplo dos menus após inserir:
