@@ -2,8 +2,9 @@
 ## Selecione o Idioma / Select the language:
 
 ### Idioma/language:
-1. [Português] (#Português)
-2. [English](#English)
+1.  [Português](#Português)
+
+2.  [English](#English)
 
 ## Português
 #### ``@author João Paulo``, Link para executar o projeto no [replit.com](https://replit.com/@JooPaulodaSilv1/ListaEncadeadaExemplo).
