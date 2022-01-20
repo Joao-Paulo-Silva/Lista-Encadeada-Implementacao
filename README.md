@@ -81,13 +81,11 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
   }
 ```
 
-
 #### Telas do projeto
-
 ##### **Menu Inicial:**
 <p align = center>
 
-![align = center](img/menuInicial.png)
+![alt text ><](img/menuInicial.png)
 
 <p>
 
@@ -96,7 +94,7 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 ##### **Menus dos tipos usados, ``Produto`` e ``Usuario``:**
 <p align = center>
 
-![align = center](img/menusDosTipos.png)
+![alt text ><](img/menusDosTipos.png)
 
 <p>
 
@@ -105,7 +103,7 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 ##### **Inserir Informações dos ``Produtos`` e ``Usuarios``:**
 <p align = center>
 
-![align = center](img/inserirDados.png)
+![alt text ><](img/inserirDados.png)
 
 <p>
 
