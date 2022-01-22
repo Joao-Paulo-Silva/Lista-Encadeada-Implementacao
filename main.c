@@ -61,9 +61,9 @@ int main(void) {
       break;
       case 3:
         if(listaProdutos != NULL)
-          deletaLista(listaProdutos);
+          deletaListaDadosAlocados(listaProdutos);
         if(listaUsuarios != NULL)
-          deletaLista(listaUsuarios);
+          deletaListaDadosAlocados(listaUsuarios);
         positionPrint(0, 10);
         return EXIT_SUCCESS;
     }  

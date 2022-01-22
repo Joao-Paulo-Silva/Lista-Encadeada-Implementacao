@@ -55,6 +55,18 @@ void deletaLista(Lista *lista){
   }
 }
 
+// Deleta todos os itens da lista e libera a memória, liberando os tipos alocados.
+void deletaListaDadosAlocados(Lista *lista){
+  if(lista != NULL){
+    while(lista != NULL){
+      Lista *aux = lista;
+      lista = lista->proximo;
+      if(aux != NULL)
+				free(aux->tipoGenerico);
+			  free(aux);
+    }
+  }
+}
 // Função length retorna a quantidade de nós da lista.
 int length(Lista *lista){
 	Lista * aux = lista;
