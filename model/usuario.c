@@ -1,4 +1,5 @@
 #include "usuario.h"
+
 //Alocar um usuário dinamicamente, retorna um Usuario.
 Usuario *alocaUsuario(){
   Usuario * novoUsuario = (Usuario*) malloc(sizeof(Usuario));
