@@ -18,22 +18,22 @@ int main(void) {
         switch(opcao){
           case 1:
           while(1){
-						sizeProdutos++;
-						listaProdutos = addItemLista(listaProdutos, inserirProduto());
-						printPrecioneEnter();
-						if(getchar() != '\n'){
-							break;
-						}
-					}
+            sizeProdutos++;
+            listaProdutos = addItemLista(listaProdutos, inserirProduto());
+            printPrecioneEnter();
+            if(getchar() != '\n'){
+              break;
+            }
+          }
            break;
           case 2:
             system("clear");
             printProdutos(listaProdutos, sizeProdutos);
           break;
-					case 3:
-					 listaProdutos = buscaTelaProduto(listaProdutos);
-					 sizeProdutos = length(listaProdutos);
-					break;
+          case 3:
+           listaProdutos = buscaTelaProduto(listaProdutos);
+           sizeProdutos = length(listaProdutos);
+          break;
         }
       break;
       case 2:
@@ -42,9 +42,9 @@ int main(void) {
           case 1:
             while(1){
               sizeUsuarios++;
-							listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
-							printPrecioneEnter();
-						  if(getchar() != '\n'){
+              listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
+              printPrecioneEnter();
+              if(getchar() != '\n'){
                 break;
               }
             }
@@ -53,10 +53,10 @@ int main(void) {
             system("clear");
             printUsuarios(listaUsuarios, sizeUsuarios);
           break;
-					case 3:
-					 listaUsuarios = buscaTelaUsuario(listaUsuarios);
-					 sizeUsuarios = length(listaUsuarios);
-					break;
+          case 3:
+           listaUsuarios = buscaTelaUsuario(listaUsuarios);
+           sizeUsuarios = length(listaUsuarios);
+          break;
         }
       break;
       case 3:

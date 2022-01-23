@@ -7,7 +7,7 @@ void positionPrint(int x,  int y){
 
 // Menu inicial do projeto.
 unsigned int menuInicial(){
-	setbuf(stdin, NULL);
+  setbuf(stdin, NULL);
   unsigned int opcao;
   system("clear");
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
@@ -25,7 +25,7 @@ unsigned int menuInicial(){
 
 // Menu para gerenciar a lista de produtos.
 unsigned int produtoMenu(){
-	setbuf(stdin, NULL);
+  setbuf(stdin, NULL);
   unsigned int opcao;
   system("clear");
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
@@ -44,7 +44,7 @@ unsigned int produtoMenu(){
 
 // Menu para gerenciar a lista de usuários.
 unsigned int usuarioMenu(){
-	setbuf(stdin, NULL);
+  setbuf(stdin, NULL);
   unsigned int opcao;
   system("clear");
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
@@ -112,7 +112,7 @@ Produto * inserirProduto(){
     }else
       break;
   }
-	setbuf(stdin, NULL);
+  setbuf(stdin, NULL);
   return produto;
 }
 
@@ -141,13 +141,13 @@ Usuario * inserirUsuario(){
   getchar();
   positionPrint(8, 7);
   scanf("%[^\n]", usuario->cpf);
-	setbuf(stdin, NULL);
+  setbuf(stdin, NULL);
   return usuario;
 }
 
 // Função para printar uma lista de produtos.
 void printProdutos(Lista *listaProdutos, int sizeProdutos){
-	system("clear");
+  system("clear");
   Lista * aux = listaProdutos;
   unsigned int posicaoY = 0, numProd = 1;
   getchar();
@@ -178,12 +178,12 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
       positionPrint(11, 6 + posicaoY);
       printf("%s", auxP->codigo);
       positionPrint(21, 7 + posicaoY);
-			if (auxP->dataValidade.dia < 10)
-				printf("0");
+      if (auxP->dataValidade.dia < 10)
+        printf("0");
       printf("%u", auxP->dataValidade.dia);
       positionPrint(24, 7 + posicaoY);
-			if (auxP->dataValidade.mes < 10)
-				printf("0");
+      if (auxP->dataValidade.mes < 10)
+        printf("0");
       printf("%u", auxP->dataValidade.mes);
       positionPrint(27, 7 + posicaoY);
       printf("%u", auxP->dataValidade.ano);
@@ -191,20 +191,20 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
       posicaoY += 7;
       numProd++;
     }
-		positionPrint(0, 9 + posicaoY - 7);
-  	printf("\t\t[\x1b[32mENTER\x1b[0m] para Continuar!   ");
+    positionPrint(0, 9 + posicaoY - 7);
+    printf("\t\t[\x1b[32mENTER\x1b[0m] para Continuar!   ");
   }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
-					 "┃       Não possui produtos na lista!       ┃\n"
-					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
-					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
-					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+           "┃       Não possui produtos na lista!       ┃\n"
+           "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+           "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+           "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
   }
   getchar();
 }
 // Função para printar uma lista de usuários.
 void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
-	system("clear");
+  system("clear");
   Lista * aux = listaUsuarios;
   unsigned int posicaoY = 0, numProd = 1;
   getchar();
@@ -240,14 +240,14 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
       posicaoY += 7;
       numProd++;
     }
-		positionPrint(0, 9 + posicaoY - 7);
-  	printf("\t\t[\x1b[32mENTER\x1b[0m] para Continuar!   ");
+    positionPrint(0, 9 + posicaoY - 7);
+    printf("\t\t[\x1b[32mENTER\x1b[0m] para Continuar!   ");
   }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
-					 "┃       Não possui usuários na lista!       ┃\n"
-					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
-					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
-					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+           "┃       Não possui usuários na lista!       ┃\n"
+           "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+           "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+           "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
   }
 
   getchar();
@@ -255,40 +255,40 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
 
 // Função printar a opção na tela de inserir após ter inserido os dados.
 void printPrecioneEnter(){
-	printf("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
-	       "┃    Pressione [\x1b[32mENTER\x1b[0m] para continuar       ┃\n"
-				 "┃  adicionando ou outra tecla para voltar!  ┃\n"
-				 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+  printf("┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+         "┃    Pressione [\x1b[32mENTER\x1b[0m] para continuar       ┃\n"
+         "┃  adicionando ou outra tecla para voltar!  ┃\n"
+         "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
 }
 
 
 Lista * buscaTelaProduto(Lista *listaProdutos){
-	system("clear");
-	setbuf(stdin, NULL);
-	Produto * produto;
-	unsigned int op;
-	char nome[50];
-	printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+  system("clear");
+  setbuf(stdin, NULL);
+  Produto * produto;
+  unsigned int op;
+  char nome[50];
+  printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                   PRODUTO                 ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━┫"
-			 "\n┃ Nome:                               ┃  ⌕  ┃"
-			 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
-	positionPrint(9, 4);
-	scanf("%[^\n]", nome);
-	setbuf(stdin, NULL);
-	produto = buscaProduto(listaProdutos, nome);
-	system("clear");
-	if(produto != NULL){
-		printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
-				"\n┃                   PRODUTO                 ┃"
-				"\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
-				"\n┃ Nome:                                     ┃"
-				"\n┃ Preço:                                    ┃"
-				"\n┃ Código:                                   ┃"
-				"\n┃ Data de Validade: __/__/____              ┃" 
-				"\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
-				"\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
-				"\n┗━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛");
+       "\n┃ Nome:                               ┃  ⌕  ┃"
+       "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
+  positionPrint(9, 4);
+  scanf("%[^\n]", nome);
+  setbuf(stdin, NULL);
+  produto = buscaProduto(listaProdutos, nome);
+  system("clear");
+  if(produto != NULL){
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+        "\n┃                   PRODUTO                 ┃"
+        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
+        "\n┃ Nome:                                     ┃"
+        "\n┃ Preço:                                    ┃"
+        "\n┃ Código:                                   ┃"
+        "\n┃ Data de Validade: __/__/____              ┃" 
+        "\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
+        "\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
+        "\n┗━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛");
       positionPrint(10, 4);
       printf("%s", produto->nome);
       positionPrint(10, 5 );
@@ -296,54 +296,54 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
       positionPrint(11, 6 );
       printf("%s", produto->codigo);
       positionPrint(21, 7 );
-			if (produto->dataValidade.dia < 10)
-				printf("0");
+      if (produto->dataValidade.dia < 10)
+        printf("0");
       printf("%u", produto->dataValidade.dia);
       positionPrint(24, 7 );
-			if (produto->dataValidade.mes < 10)
-				printf("0");
+      if (produto->dataValidade.mes < 10)
+        printf("0");
       printf("%u", produto->dataValidade.mes);
       positionPrint(27, 7 );
       printf("%u", produto->dataValidade.ano);
-			do{
-				positionPrint(0, 11);
-				printf("                                  ");
-				positionPrint(0, 11);
-				scanf("%u", &op);
-			}while(op > 2);
-			setbuf(stdin, NULL);
-			if(op == 2){
-				return removeItemLista(listaProdutos, produto);
-			}
-	}else{
+      do{
+        positionPrint(0, 11);
+        printf("                                  ");
+        positionPrint(0, 11);
+        scanf("%u", &op);
+      }while(op > 2);
+      setbuf(stdin, NULL);
+      if(op == 2){
+        return removeItemLista(listaProdutos, produto);
+      }
+  }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
-					 "┃    Não foi encontrado nenhum resultado!   ┃\n"
-					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
-					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
-					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+           "┃    Não foi encontrado nenhum resultado!   ┃\n"
+           "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+           "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+           "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
     getchar();
   }
-	return listaProdutos;
+  return listaProdutos;
 
 }
 Lista * buscaTelaUsuario(Lista *listaUsuarios){
-	system("clear");
-	setbuf(stdin, NULL);
-	unsigned int op;
-	Usuario * usuario;
-	char nome[50];
-	printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+  system("clear");
+  setbuf(stdin, NULL);
+  unsigned int op;
+  Usuario * usuario;
+  char nome[50];
+  printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                   USUÁRIO                 ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━┫"
-			 "\n┃ Nome:                               ┃  ⌕  ┃"
-			 "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
-	positionPrint(9, 4);
-	scanf("%[^\n]", nome);
-	setbuf(stdin, NULL);
-	usuario = buscaUsuarios(listaUsuarios, nome);	
-	system("clear");
-	if(usuario != NULL){
-		printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+       "\n┃ Nome:                               ┃  ⌕  ┃"
+       "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━┛");
+  positionPrint(9, 4);
+  scanf("%[^\n]", nome);
+  setbuf(stdin, NULL);
+  usuario = buscaUsuarios(listaUsuarios, nome);  
+  system("clear");
+  if(usuario != NULL){
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
          "\n┃                   USUÁRIO                 ┃"
          "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
          "\n┃ Nome:                                     ┃"
@@ -351,33 +351,33 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
          "\n┃ E-mail:                                   ┃"
          "\n┃ CPF:                                      ┃" 
          "\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
-		 		 "\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
-	  		 "\n┗━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛");
-		positionPrint(9, 4);
-		printf("%s", usuario->nome);
-		positionPrint(10, 5);
-		printf("%u", usuario->idade);
-		positionPrint(11, 6);
-		printf("%s", usuario->email);
-		positionPrint(8, 7);
-		printf("%s", usuario->cpf);
-		do{
-			positionPrint(0, 11);
-			printf("                                  ");
-			positionPrint(0, 11);
-			scanf("%u", &op);
-		}while(op > 2);
-		setbuf(stdin, NULL);
-		if(op == 2){
-			return removeItemLista(listaUsuarios, usuario);
-		}
-	}else{
+          "\n┃        1 - \x1b[32mOK\x1b[0m        ┃     2 - \x1b[31mDELETAR\x1b[0m    ┃"
+         "\n┗━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┛");
+    positionPrint(9, 4);
+    printf("%s", usuario->nome);
+    positionPrint(10, 5);
+    printf("%u", usuario->idade);
+    positionPrint(11, 6);
+    printf("%s", usuario->email);
+    positionPrint(8, 7);
+    printf("%s", usuario->cpf);
+    do{
+      positionPrint(0, 11);
+      printf("                                  ");
+      positionPrint(0, 11);
+      scanf("%u", &op);
+    }while(op > 2);
+    setbuf(stdin, NULL);
+    if(op == 2){
+      return removeItemLista(listaUsuarios, usuario);
+    }
+  }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
-					 "┃    Não foi encontrado nenhum resultado!   ┃\n"
-					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
-					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
-					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+           "┃    Não foi encontrado nenhum resultado!   ┃\n"
+           "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+           "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+           "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
     getchar();
   }
-	return listaUsuarios;
+  return listaUsuarios;
 }

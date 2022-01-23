@@ -24,21 +24,21 @@ Lista * removeItemLista(Lista *lista, void * endTipo){
   Lista * anterior = NULL, *atual;
   atual = lista;
   do{
-		if(atual->tipoGenerico == endTipo){
-			if(anterior == NULL){
-				if(atual->proximo == NULL)
-					return NULL;
-			 	lista = atual->proximo;
-				free(atual);
-				return lista;
-			}else{
-				anterior->proximo = atual->proximo;
-				free(atual);
-				return lista;
-			}
-		}
-		anterior = atual;
-		atual = atual->proximo;
+    if(atual->tipoGenerico == endTipo){
+      if(anterior == NULL){
+        if(atual->proximo == NULL)
+          return NULL;
+         lista = atual->proximo;
+        free(atual);
+        return lista;
+      }else{
+        anterior->proximo = atual->proximo;
+        free(atual);
+        return lista;
+      }
+    }
+    anterior = atual;
+    atual = atual->proximo;
   }while(atual != NULL);
   return lista;
 }
@@ -50,7 +50,7 @@ void deletaLista(Lista *lista){
       Lista *aux = lista;
       lista = lista->proximo;
       if(aux != NULL)
-			  free(aux);
+        free(aux);
     }
   }
 }
@@ -62,18 +62,18 @@ void deletaListaDadosAlocados(Lista *lista){
       Lista *aux = lista;
       lista = lista->proximo;
       if(aux != NULL)
-				free(aux->tipoGenerico);
-			  free(aux);
+        free(aux->tipoGenerico);
+        free(aux);
     }
   }
 }
 // Função length retorna a quantidade de nós da lista.
 int length(Lista *lista){
-	Lista * aux = lista;
-	int length = 0;
-	while(aux != NULL){
-		length++;
-		aux = aux->proximo;
-	}
-	return length;
+  Lista * aux = lista;
+  int length = 0;
+  while(aux != NULL){
+    length++;
+    aux = aux->proximo;
+  }
+  return length;
 }

@@ -5,9 +5,10 @@
 
 // Tipo lista armazena um endereço de um valor genérico e o próximo.
 typedef struct LISTA{
-  
+
   void * tipoGenerico;
   struct LISTA * proximo;
+
 }Lista;
 
 // Retorna uma lista com valor nulo.
