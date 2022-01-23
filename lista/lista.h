@@ -11,6 +11,7 @@ typedef struct LISTA{
 
 }Lista;
 
+
 // Retorna uma lista com valor nulo.
 Lista * iniciaLista();
 // Alocar um nó da lista na memória.

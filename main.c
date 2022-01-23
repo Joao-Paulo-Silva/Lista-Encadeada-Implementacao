@@ -5,7 +5,6 @@
 // Main iniciar o programa chamando as funções.
 int main(void) {
   unsigned int opcao;
-  int sizeProdutos = 0, sizeUsuarios = 0;
   Lista * listaProdutos = iniciaLista();
   Lista * listaUsuarios = iniciaLista();
   
@@ -18,7 +17,6 @@ int main(void) {
         switch(opcao){
           case 1:
           while(1){
-            sizeProdutos++;
             listaProdutos = addItemLista(listaProdutos, inserirProduto());
             printPrecioneEnter();
             if(getchar() != '\n'){
@@ -28,11 +26,10 @@ int main(void) {
            break;
           case 2:
             system("clear");
-            printProdutos(listaProdutos, sizeProdutos);
+            printProdutos(listaProdutos, length(listaProdutos));
           break;
           case 3:
            listaProdutos = buscaTelaProduto(listaProdutos);
-           sizeProdutos = length(listaProdutos);
           break;
         }
       break;
@@ -41,7 +38,6 @@ int main(void) {
         switch(opcao){
           case 1:
             while(1){
-              sizeUsuarios++;
               listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
               printPrecioneEnter();
               if(getchar() != '\n'){
@@ -51,11 +47,10 @@ int main(void) {
           break;
           case 2:
             system("clear");
-            printUsuarios(listaUsuarios, sizeUsuarios);
+            printUsuarios(listaUsuarios, length(listaUsuarios));
           break;
           case 3:
            listaUsuarios = buscaTelaUsuario(listaUsuarios);
-           sizeUsuarios = length(listaUsuarios);
           break;
         }
       break;

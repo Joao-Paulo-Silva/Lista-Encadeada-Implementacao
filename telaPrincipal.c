@@ -106,7 +106,7 @@ Produto * inserirProduto(){
   while(1){
     positionPrint(27, 7);
     scanf("%u", &produto->dataValidade.ano);
-    if(produto->dataValidade.ano < 2000){
+    if(produto->dataValidade.ano < 2000 || produto->dataValidade.ano > 9999){
       positionPrint(27, 7);
       printf("____              ┃");
     }else
