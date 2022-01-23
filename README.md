@@ -47,7 +47,7 @@ Para armazenar os dados na lista de forma genérica, os dados serão armazenados
 
 ---
 
-### Adicionando dados ca lista:
+### Adicionando dados a lista:
 
 Para adicionar valores a lista será utilizado uma variável auxiliar do tipo ``Lista`` para armazenar o início da lista atual. Para encadear a lista é necessário salvar o nó atual antes de atualizar o primeiro da lista. Exemplo:
 
