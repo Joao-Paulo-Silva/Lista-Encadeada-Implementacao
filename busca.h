@@ -11,4 +11,5 @@ Produto * buscaProduto(Lista * listaProdutos, char * nome);
 // Função buscaUsuarios retorna um  endereço de um Usuario, se encontrado na lista de usuários a partir do nome.
 Usuario * buscaUsuarios(Lista * listaUsuarios, char * nome);
 
+
 #endif /*BUSCA_H*/
