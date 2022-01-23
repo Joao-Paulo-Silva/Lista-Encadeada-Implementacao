@@ -11,9 +11,9 @@
 ## Português
 #### ``@author João Paulo``, Link para executar o projeto no [replit.com](https://replit.com/@JooPaulodaSilv1/ListaEncadeadaExemplo).
 
-Este projeto demonstra a criação e utilização de uma lista encadeada para tipos genéricos com a linguagem c, no qual utiliza de duas ``struct`` e a mesma lista para armazená-las. Para a criação da lista sem a necessidade de um tipo específico nos nós, os mesmos armazenam os endereços com uma variável não definida(``void``). 
+Este projeto demonstra a criação e utilização de uma lista encadeada para tipos genéricos com a linguagem c, no qual utiliza-se de duas ``struct`` e a mesma lista para armazená-las. Para a criação da lista sem a necessidade de um tipo específico nos nós, os mesmos armazenam os endereços com uma variável não definida(``void``). 
 
-A lista encadeada com tipos genéricos usa ponteiro ``*`` e utilizando bibliotecas customizadas ``Exemplo.h``, para uma melhor organização do algoritmo.
+A lista encadeada com tipos genéricos deste projeto usa-se de ponteiro ``*`` e utiliza-se de bibliotecas customizadas ``Exemplo.h``, para uma melhor organização do algoritmo.
 
 ### Lista Encadeada:
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
@@ -76,18 +76,18 @@ Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armaz
 #### Exemplo:
 ```C
 // Exemplo de função que percorre a lista.
-  int percorrendoLista(Lista * lista, int i){
-	  aux = lista;
-  	int posicao = 0;
-	  while(aux != NULL){
-		  if(posicao == i){
-			  return lista->valor;
-	  	}
-		  aux = aux->proximo;
-	  }
-	  printf("Posição inválida.");
-	  return NULL;
+int percorrendoLista(Lista * lista, int i){
+  aux = lista;
+  int posicao = 0;
+  while(aux != NULL){
+    if(posicao == i){
+      return lista->valor;
+    }
+    aux = aux->proximo;
   }
+  printf("Posição inválida.");
+  return NULL;
+}
 ```
 
 #### **Telas do projeto**
@@ -173,10 +173,10 @@ A linked list is a list, in which the last item entered becomes the first in the
 
 ```C
 // Linked list structure.
-  typedef struct LIST{
-    int valor;
-    struct LIST * next;
-  }List;
+typedef struct LIST{
+  int value;
+  struct LIST * next;
+}List;
 ```
 
 The ``LIST *next;`` struct stores the address of the next node in the list.
@@ -197,7 +197,7 @@ To add values ​​to the list, an auxiliary variable of type ``List`` will be 
 
 ```C
   List * aux = CurrentList;
-  currentList = newNode;
+	currentList = newNode;
   CurrentList->next = aux;
 ```
 
@@ -222,16 +222,16 @@ To traverse the list, we use a loop and an auxiliary variable to store the curre
 ```C
 // Example of function that traverses the list.
 int traversingList(List * list, int i){
-	aux = list;
-	int position = 0;
-	while(aux != NULL){
-		if(position == i){
-			return list->value;
-		}
-		aux = aux->next;
-	}
-	printf("Invalid position.");
-	return NULL;
+  aux = list;
+  int position = 0;
+  while(aux != NULL){
+    if(position == i){
+      return list->value;
+    }
+    aux = aux->next;
+  }
+  printf("Invalid position.");
+  return NULL;
 }
 ```
 
