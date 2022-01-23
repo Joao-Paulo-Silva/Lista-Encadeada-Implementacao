@@ -315,7 +315,14 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
 			if(op == 2){
 				return removeItemLista(listaProdutos, produto);
 			}
-	}
+	}else{
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
+					 "┃    Não foi encontrado nenhum resultado!   ┃\n"
+					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+    getchar();
+  }
 	return listaProdutos;
 
 }
@@ -364,6 +371,13 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
 		if(op == 2){
 			return removeItemLista(listaUsuarios, usuario);
 		}
-	}
+	}else{
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
+					 "┃    Não foi encontrado nenhum resultado!   ┃\n"
+					 "┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\n"
+					 "┃         [\x1b[32mENTER\x1b[0m] para Continuar!           ┃\n"
+					 "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+    getchar();
+  }
 	return listaUsuarios;
 }

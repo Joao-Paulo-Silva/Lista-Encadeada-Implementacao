@@ -197,7 +197,7 @@ To add values ​​to the list, an auxiliary variable of type ``List`` will be 
 
 ```C
   List * aux = CurrentList;
-	currentList = newNode;
+  currentList = newNode;
   CurrentList->next = aux;
 ```
 

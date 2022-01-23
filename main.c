@@ -41,7 +41,7 @@ int main(void) {
         switch(opcao){
           case 1:
             while(1){
-							sizeUsuarios++;
+              sizeUsuarios++;
 							listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
 							printPrecioneEnter();
 						  if(getchar() != '\n'){
