@@ -168,7 +168,7 @@ A linked list is a list, in which the last item entered becomes the first in the
 
 <p align = center> 
 
-![alt text ><](img/listaEncadeada.png) <p>
+![alt text ><](img/LinkedList.png) <p>
 
 **Example of ``struct`` for linked list with integers:**
 
