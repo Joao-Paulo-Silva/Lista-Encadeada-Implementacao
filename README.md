@@ -19,7 +19,7 @@ A lista encadeada com tipos genéricos deste projeto usa-se de ponteiro ``*`` e 
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
 <p align = center> 
 
-![alt text ><](img/listaEncadeada.svg) <p>
+![alt text ><](img/listaEncadeada.png) <p>
 
 **Exemplo de ``struct`` para lista encadeada com inteiros:**
 
@@ -90,12 +90,15 @@ int percorrendoLista(Lista * lista, int i){
 }
 ```
 
+
 #### **Telas do projeto**
+
 
 
 ##### **Menu Inicial:**
 
 ![alt text ><](img/menuInicial.png)
+
 
 No menu inicial o usuário pode decidir selecionar produtos, usuários ou sair. 
 
@@ -165,7 +168,7 @@ A linked list is a list, in which the last item entered becomes the first in the
 
 <p align = center> 
 
-![alt text ><](img/listaEncadeada.svg) <p>
+![alt text ><](img/listaEncadeada.png) <p>
 
 **Example of ``struct`` for linked list with integers:**
 
