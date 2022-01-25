@@ -2,10 +2,10 @@
 #define  TELAPRINCIPAL_H
 
 #include <stdio.h>
-#include "model/produto.h"
-#include "model/usuario.h"
-#include "lista/lista.h"
-#include "busca.h"
+#include "../model/produto.h"
+#include "../model/usuario.h"
+#include "../lista/lista.h"
+#include "../control/busca.h"
 
 // Função para posicionar o ponteiro na tela do terminal, para efetuar os prints sem apagar a tela.
 void positionPrint(int x,  int y);

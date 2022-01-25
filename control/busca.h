@@ -2,9 +2,9 @@
 #define  BUSCA_H
 
 #include <string.h>
-#include "model/produto.h"
-#include "model/usuario.h"
-#include "lista/lista.h"
+#include "../model/produto.h"
+#include "../model/usuario.h"
+#include "../lista/lista.h"
 
 // Função buscaProduto retorna um  endereço de um Produto, se encontrado na lista de produtos a partir do nome.
 Produto * buscaProduto(Lista * listaProdutos, char * nome);

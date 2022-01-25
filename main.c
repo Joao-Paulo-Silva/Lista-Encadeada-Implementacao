@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "lista/lista.h"
-#include "telaPrincipal.h"
+#include "view/telaPrincipal.h"
 
 // Main iniciar o programa chamando as funções.
 int main(void) {
