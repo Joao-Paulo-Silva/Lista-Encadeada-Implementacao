@@ -13,6 +13,7 @@ Lista * aux = listaProdutos;
   return NULL;
 }
 
+// Função buscaUsuarios retorna um  endereço de um Usuario, se encontrado na lista de usuários a partir do nome.
 Usuario * buscaUsuarios(Lista * listaUsuarios, char * nome){
   Lista * aux = listaUsuarios;
   while(aux != NULL){

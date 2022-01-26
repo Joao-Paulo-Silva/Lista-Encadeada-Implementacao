@@ -39,7 +39,7 @@ O ``struct LISTA * proximo;`` armazena o endereço do próximo nó da lista.
 
 ### Exemplo utilizado neste projeto:
 
-Neste projeto será criado 2 lista encadeada usando a lista genérica que se encontra na pasta ``lista/lista.h`` e ``lista/lista.c``. As lista serão criadas com dois ``typedef struct``, denominados como ``Produto`` e ``Usuario``.
+Neste projeto será criado 2 lista encadeada usando a lista genérica que se encontra na pasta [``lista/lista.h``](lista/lista.h) e [``lista/lista.c``](lista/lista.c). As lista serão criadas com dois ``typedef struct``, denominados como ``Produto`` e ``Usuario``.
 
 ### Generalização dos tipos para armazenar na lista:
 
@@ -186,7 +186,7 @@ The ``LIST *next;`` struct stores the address of the next node in the list.
 
 ### Example used in this project:
 
-In this project, 2 linked lists will be created using the generic list found in the folders ``lista/lista.h`` and ``lista/lista.c``. The lists will be created with two ``typedef struct``, named as ``Produto`` e ``Usuario``.
+In this project, 2 linked lists will be created using the generic list found in the folders [``lista/lista.h``](lista/lista.h) and[``lista/lista.c``](lista/lista.c). The lists will be created with two ``typedef struct``, named as ``Produto`` e ``Usuario``.
 
 ### Generalization of types to store in the list:
 
