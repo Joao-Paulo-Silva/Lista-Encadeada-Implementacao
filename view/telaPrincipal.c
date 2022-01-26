@@ -261,7 +261,9 @@ void printPrecioneEnter(){
          "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
 }
 
-
+/* Função de busca contém a tela de pesquisa e mostra os resultados, 
+ * retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
+ */
 Lista * buscaTelaProduto(Lista *listaProdutos){
   system("clear");
   setbuf(stdin, NULL);
@@ -328,6 +330,10 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
   return listaProdutos;
 
 }
+
+/* Função de busca contém a tela de pesquisa e mostra os resultados, 
+ * retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
+ */
 Lista * buscaTelaUsuario(Lista *listaUsuarios){
   system("clear");
   setbuf(stdin, NULL);
