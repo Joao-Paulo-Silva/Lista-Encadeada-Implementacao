@@ -26,5 +26,9 @@ void deletaLista(Lista *lista);
 void deletaListaDadosAlocados(Lista *lista);
 // Função length retorna a quantidade de nós da lista.
 int length(Lista *lista);
+// Função get() pegar o valor da posição do último a ser inserido até o primeiro.
+void * get(Lista *lista, unsigned int i);
+// Função get() pegar o valor da posição do primeiro a ser inserido até o último.
+void * getOrdemInsercao(Lista *lista, unsigned int i);
 
 #endif  /*LISTA_H*/

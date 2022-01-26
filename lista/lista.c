@@ -77,3 +77,33 @@ int length(Lista *lista){
   }
   return length;
 }
+
+// Função get() pegar o valor da posição do último a ser inserido até o primeiro.
+void * get(Lista *lista, unsigned int i){
+  if(i >= length(lista))
+    return NULL;
+  else{
+    Lista * aux = lista;
+    for(int j = 0; j <= i; j++){
+      if(j == i)
+        return aux->tipoGenerico;
+      aux = aux->proximo;
+    }
+  }
+}
+
+// Função get() pegar o valor da posição do primeiro a ser inserido até o último.
+void * getOrdemInsercao(Lista *lista, unsigned int i){
+  int quantidade = length(lista);
+  if(i >= quantidade)
+    return NULL;
+  else{
+    i = quantidade - i;
+    Lista * aux = lista;
+    for(int j = 0; j <= i; j++){
+      if(j == i)
+        return aux->tipoGenerico;
+      aux = aux->proximo;
+    }
+  }
+}

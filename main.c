@@ -7,7 +7,7 @@ int main(void) {
   unsigned int opcao;
   Lista * listaProdutos = iniciaLista();
   Lista * listaUsuarios = iniciaLista();
-  
+
   while(1){
     system("clear");
     opcao = menuInicial();

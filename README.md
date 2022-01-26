@@ -1,7 +1,9 @@
 # Lista encadeada em liguagem C
+
 ## Selecione o Idioma / Select the language:
 
 ### Idioma/language:
+
 1.  [Português](#Português)
 
 2.  [English](#English)
@@ -9,6 +11,7 @@
 
 
 ## Português
+
 #### ``@author João Paulo``, Link para executar o projeto no [replit.com](https://replit.com/@JooPaulodaSilv1/ListaEncadeadaExemplo).
 
 Este projeto demonstra a criação e utilização de uma lista encadeada para tipos genéricos com a linguagem c, no qual utiliza-se de duas ``struct`` e a mesma lista para armazená-las. Para a criação da lista sem a necessidade de um tipo específico nos nós, os mesmos armazenam os endereços com uma variável não definida(``void``). 
@@ -16,6 +19,7 @@ Este projeto demonstra a criação e utilização de uma lista encadeada para ti
 A lista encadeada com tipos genéricos deste projeto usa-se de ponteiro ``*`` e utiliza-se de bibliotecas customizadas ``Exemplo.h``, para uma melhor organização do algoritmo.
 
 ### Lista Encadeada:
+
 A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
 <p align = center> 
 
@@ -74,6 +78,7 @@ Com isso no primeiro nó inserido na lista seu próximo apontará para um valor 
 Para percorrer a lista utiliza-se de um loop e uma variável auxiliar para armazenar os nós atuais.
 
 #### Exemplo:
+
 ```C
 // Exemplo de função que percorre a lista.
 int percorrendoLista(Lista * lista, int i){
@@ -164,6 +169,7 @@ This project demonstrates the creation and use of a linked list for generic type
 The linked list with generic types uses pointer ``*`` and using custom libraries ``Example.h``, for a better organization of the algorithm.
 
 ### Linked List:
+
 A linked list is a list, in which the last item entered becomes the first in the list. each piece of data knows the address of the next and is used to scroll through the list.
 
 <p align = center> 
@@ -222,6 +228,7 @@ With that in the first node inserted in the list its next one will point to a nu
 To traverse the list, we use a loop and an auxiliary variable to store the current nodes.
 
 #### Example:
+
 ```C
 // Example of function that traverses the list.
 int traversingList(List * list, int i){
