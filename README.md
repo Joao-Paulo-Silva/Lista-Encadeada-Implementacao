@@ -8,6 +8,7 @@
 
 2.  [English](#English)
 
+3. [Docs.](docs/indice.md)
 
 
 ## Português
@@ -20,7 +21,8 @@ A lista encadeada com tipos genéricos deste projeto usa-se de ponteiro ``*`` e 
 
 ### Lista Encadeada:
 
-A lista encadeada é uma lista, no qual o último item inserido torna-se o primeiro da lista. cada dado conhece o endereço do próximo, sendo utilizado para percorrer pela lista.
+Uma lista encadeada é a armazenação de um conjunto de elementos, no qual cada elemento conhece o próximo na lista. Sendo uma ótima maneira para substituir vetores, já que os mesmos tem sua quantidade de elementos limitada pelo valor definido nos mesmos. A implementação de uma lista encadeada em C dá-se pela utilização de uma estrutura que contém o elemento e o endereço do próximo.
+
 <p align = center> 
 
 ![alt text ><](img/listaEncadeada.png) <p>
@@ -170,7 +172,7 @@ The linked list with generic types uses pointer ``*`` and using custom libraries
 
 ### Linked List:
 
-A linked list is a list, in which the last item entered becomes the first in the list. each piece of data knows the address of the next and is used to scroll through the list.
+A linked list is the storage of a set of elements, where each element knows the next one in the list. Being a great way to replace vectors, since they have their number of elements limited by the value defined in them. The implementation of a linked list in C is done by using a structure that contains the element and the address of the next one.
 
 <p align = center> 
 
