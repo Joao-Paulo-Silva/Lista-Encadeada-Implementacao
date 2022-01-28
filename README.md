@@ -8,6 +8,9 @@
 
 2.  [English](#English)
 
+---
+### Documentação do projeto / project documentation:
+
 3. [Docs.](docs/indice.md)
 
 
