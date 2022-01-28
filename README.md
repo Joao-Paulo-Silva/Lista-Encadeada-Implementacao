@@ -1,4 +1,4 @@
-# Lista encadeada em liguagem C
+# Lista encadeada em liguagem C 
 
 ## Selecione o Idioma / Select the language:
 
@@ -11,7 +11,7 @@
 ---
 ### Documentação do projeto / project documentation:
 
-3. [Docs.](docs/indice.md)
+3. [Docs.](docs/indice.md#-índice-)
 
 
 ## Português
