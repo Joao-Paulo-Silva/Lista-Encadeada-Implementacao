@@ -5,6 +5,8 @@
 // Main iniciar o programa chamando as funções.
 int main(void) {
   unsigned int opcao;
+  // Criar as duas listas que serão utilizadas para armazenar, produtos e usuários.
+
   Lista * listaProdutos = iniciaLista();
   Lista * listaUsuarios = iniciaLista();
   

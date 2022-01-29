@@ -44,3 +44,5 @@ Usuario * buscaUsuarios(Lista * listaUsuarios, char * nome);
 ```
 
 The ``buscaUsuarios`` function, searches for a ``Usuario`` in a list of products from the name of the same informed and returns the address of a user if found or ``NULL`` if not found.
+
+---
