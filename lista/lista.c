@@ -67,6 +67,7 @@ void deletaListaDadosAlocados(Lista *lista){
     }
   }
 }
+
 // Função length retorna a quantidade de nós da lista.
 int length(Lista *lista){
   Lista * aux = lista;
