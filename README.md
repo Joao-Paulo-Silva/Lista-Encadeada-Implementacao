@@ -207,7 +207,7 @@ To store the data in the list generically, the data will be stored at address of
 
 ### Adding data to the list:
 
-To add values ​​to the list, an auxiliary variable of type ``List`` will be used to store the beginning of the current list. To chain the list it is necessary to save the current node before updating the first one in the list. Example:
+To add values to the list, an auxiliary variable of type ``List`` will be used to store the beginning of the current list. To chain the list it is necessary to save the current node before updating the first one in the list. Example:
 
 ```C
   List * aux = CurrentList;
