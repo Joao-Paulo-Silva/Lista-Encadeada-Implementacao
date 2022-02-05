@@ -1,13 +1,6 @@
 #include "arquivo.h"
 
-
-bool gravaDadosArquivo(Lista lista, char *patch);
-
-Lista * lerArquivoProdutos(char *patch);
-
-Lista* lerArquivoUsuario(char *patch);
-#include "arquivo.h"
-
+// Funções para gravar uma lista de um determinado tipo, recebe como parâmetro o caminho e a lista, retorna um booleano  verdadeiro se houver sucesso ao gravar e falso se houver erros.
 bool gravaUsuarios(Lista * listaUsuarios, char * patch) {
   int tamanhoLista;
   if ((tamanhoLista = length(listaUsuarios)) > 0) {
@@ -24,6 +17,7 @@ bool gravaUsuarios(Lista * listaUsuarios, char * patch) {
   }
 }
 
+// Funções para gravar uma lista de um determinado tipo, recebe como parâmetro o caminho e a lista, retorna um booleano  verdadeiro se houver sucesso ao gravar e falso se houver erros.
 bool gravaProdutos(Lista * listaProdutos, char * patch) {
 
   int tamanhoLista;
@@ -42,6 +36,7 @@ bool gravaProdutos(Lista * listaProdutos, char * patch) {
   }
 }
 
+// Funções leem arquivos a partir do caminho, pegando os dados de  determinados tipos.
 Lista * lerArquivoProdutos(char * patch) {
   int i = 0;
   Lista * lista = iniciaLista();
@@ -62,7 +57,9 @@ Lista * lerArquivoProdutos(char * patch) {
   fclose(arquivo);
   return lista;
 }
-  Lista * lerArquivoUsuarios(char * patch){
+
+// Funções leem arquivos a partir do caminho, pegando os dados de  determinados tipos.
+Lista * lerArquivoUsuarios(char * patch){
   int i = 0;
   Lista * lista = iniciaLista();
   FILE * arquivo;
