@@ -5,11 +5,16 @@ void positionPrint(int x,  int y){
   printf("\033[%d;%dH", y, x);
 }
 
+// Função para limpar o terminal e substituir o system(“clear”) ou “cls”, para executar em qualquer sistema.
+void limpaConsole(){
+  printf("\033[H\033[2J");
+}
+
 // Menu inicial do projeto.
 unsigned int menuInicial(){
   setbuf(stdin, NULL);
   unsigned int opcao;
-  system("clear");
+  limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃              MENU INICIAL            ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"  
@@ -27,7 +32,7 @@ unsigned int menuInicial(){
 unsigned int produtoMenu(){
   setbuf(stdin, NULL);
   unsigned int opcao;
-  system("clear");
+  limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                PRODUTOS              ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"  
@@ -46,7 +51,7 @@ unsigned int produtoMenu(){
 unsigned int usuarioMenu(){
   setbuf(stdin, NULL);
   unsigned int opcao;
-  system("clear");
+  limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                USUÁRIO               ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫"  
@@ -66,7 +71,7 @@ Produto * inserirProduto(){
   setbuf(stdin, NULL);
   Produto * produto = alocaProduto();
   Validade data;
-  system("clear");
+  limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                   PRODUTO                 ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
@@ -121,7 +126,7 @@ Usuario * inserirUsuario(){
   setbuf(stdin, NULL);
   Usuario * usuario = alocaUsuario();
   Validade data;
-  system("clear");
+  limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                   USUÁRIO                 ┃"
        "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
@@ -147,7 +152,7 @@ Usuario * inserirUsuario(){
 
 // Função para printar uma lista de produtos.
 void printProdutos(Lista *listaProdutos, int sizeProdutos){
-  system("clear");
+  limpaConsole();
   Lista * aux = listaProdutos;
   unsigned int posicaoY = 0, numProd = 1;
   getchar();
@@ -204,7 +209,7 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
 }
 // Função para printar uma lista de usuários.
 void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
-  system("clear");
+  limpaConsole();
   Lista * aux = listaUsuarios;
   unsigned int posicaoY = 0, numProd = 1;
   getchar();
@@ -265,7 +270,7 @@ void printPrecioneEnter(){
  * retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
  */
 Lista * buscaTelaProduto(Lista *listaProdutos){
-  system("clear");
+  limpaConsole();
   setbuf(stdin, NULL);
   Produto * produto;
   unsigned int op;
@@ -279,7 +284,7 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
   scanf("%[^\n]", nome);
   setbuf(stdin, NULL);
   produto = buscaProduto(listaProdutos, nome);
-  system("clear");
+  limpaConsole();
   if(produto != NULL){
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
         "\n┃                   PRODUTO                 ┃"
@@ -335,7 +340,7 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
  * retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
  */
 Lista * buscaTelaUsuario(Lista *listaUsuarios){
-  system("clear");
+  limpaConsole();
   setbuf(stdin, NULL);
   unsigned int op;
   Usuario * usuario;
@@ -349,7 +354,7 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
   scanf("%[^\n]", nome);
   setbuf(stdin, NULL);
   usuario = buscaUsuarios(listaUsuarios, nome);  
-  system("clear");
+  limpaConsole();
   if(usuario != NULL){
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
          "\n┃                   USUÁRIO                 ┃"
@@ -390,4 +395,38 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
     getchar();
   }
   return listaUsuarios;
+}
+
+// Interface com opção de salvar ou sair.
+void telaSalvar(Lista * listaProdutos, Lista * listaUsuario, char * patchProdutos, char * patchUsuario){
+  unsigned int op;
+  do{
+    limpaConsole(); 
+    printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
+           "\n┃                   USUÁRIO                 ┃"
+           "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
+           "\n┃       Salvar informações em arquivo?      ┃"
+           "\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"
+           "\n┃     1 - SALVAR       ┃     2 - SAIR       ┃"
+           "\n┣━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━┫"
+           "\n┃ Opção:                                    ┃" 
+           "\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+    positionPrint(10, 8);
+    scanf("%u", &op);
+  }while(op > 2);    
+  if(op == 1){
+    limpaConsole();
+    bool verificaProduto, verificaUsuario; 
+    verificaProduto = gravaProdutos(listaProdutos, patchProdutos);
+    verificaUsuario = gravaUsuarios(listaUsuario, patchUsuario);
+    if(verificaProduto == true || verificaUsuario == true){
+      printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
+             "┃     \x1b[32m✓ Salvo com sucesso!\x1b[0m      ┃\n"
+             "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+    }else{
+      printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
+             "┃    \x1b[31m✖ Erro ao salvar arquivos!\x1b[0m      ┃\n"
+             "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
+    }
+  }
 }
