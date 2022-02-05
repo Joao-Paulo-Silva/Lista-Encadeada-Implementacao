@@ -6,6 +6,7 @@
 #include "../model/usuario.h"
 #include "../lista/lista.h"
 #include "../control/busca.h"
+#include "../control/arquivo.h"
 
 // Função para posicionar o ponteiro na tela do terminal, para efetuar os prints sem apagar a tela.
 void positionPrint(int x,  int y);
@@ -30,5 +31,8 @@ void printPrecioneEnter();
 // Funções de busca contém a tela de pesquisa e mostra os resultados, retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
 Lista * buscaTelaProduto(Lista *listaProdutos);
 Lista * buscaTelaUsuario(Lista *listaUsuarios);
+
+// Interface com opção de salvar ou sair.
+void telaSalvar(Lista * listaProdutos, Lista * listaUsuario, char * patchProdutos, char * patchUsuario);
 
 #endif /*TELAPRINCIPAL_H*/
