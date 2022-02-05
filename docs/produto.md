@@ -70,6 +70,7 @@ typedef struct DATAVALIDADE{
 ```
 
 Struct ``DATAVALIDADE``, defines the expiration date, with variables for day, month, year.
+
 ---
 
 ```C

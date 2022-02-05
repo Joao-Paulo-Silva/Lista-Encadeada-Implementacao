@@ -9,7 +9,7 @@
 > 2. [**Produto** : ``produto.h``](produto.md#Português)
 > 3. [**Usuario** : ``usuario.h``](usuario.md#Português)
 > 4. [**Busca** : ``busca.h``](busca.md#Português)
-> 5. [**Manipulação de arquivos.** : ``arquivo.h``](arquivo.md#Português)
+> 5. [**Manipulação de arquivos:** : ``arquivo.h``](arquivo.md#Português)
 
 ## <p align = center> **INDEX** <p>
 
@@ -21,5 +21,6 @@
 > 2. [**Product** : ``produto.h``](produto.md#English)
 > 3. [**User** : ``usuario.h``](usuario.md#English)
 > 4. [**Search** : ``busca.h``](busca.md#English)
+> 5. [**File manipulation:** : ``arquivo.h``](arquivo.md#English)
 
 ---

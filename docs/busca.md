@@ -1,7 +1,7 @@
 
 ## Português
 
-### Biblioteca ``busca.h``, faz a busca de elementos inseridos na lista com os tipos usados no projeto a partir do nome informado.
+Biblioteca ``busca.h``, faz a busca de elementos inseridos na lista com os tipos usados no projeto a partir do nome informado.
 
 ---
 
@@ -24,7 +24,7 @@ A função ``buscaUsuarios``, busca um ``Usuario`` em uma lista de produtos a pa
 
 ## English
 
-### Library ``busca.h``, searches for elements inserted in the list with the types used in the project from the name informed.
+Library ``busca.h``, searches for elements inserted in the list with the types used in the project from the name informed.
 
 ---
 
