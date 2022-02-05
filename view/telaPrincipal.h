@@ -10,6 +10,8 @@
 
 // Função para posicionar o ponteiro na tela do terminal, para efetuar os prints sem apagar a tela.
 void positionPrint(int x,  int y);
+// Função para limpar o terminal e substituir o system(“clear”) ou “cls”, para executar em qualquer sistema.
+void limpaConsole();
 
 // Menu inicial do projeto.
 unsigned int menuInicial();
