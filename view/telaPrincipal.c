@@ -403,7 +403,7 @@ void telaSalvar(Lista * listaProdutos, Lista * listaUsuario, char * patchProduto
   do{
     limpaConsole(); 
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
-           "\n┃                   USUÁRIO                 ┃"
+           "\n┃                 MENU INICIAL              ┃"
            "\n┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫" 
            "\n┃       Salvar informações em arquivo?      ┃"
            "\n┣━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┫"

@@ -9,10 +9,10 @@
 // Main iniciar o programa chamando as funções.
 int main(void) {
   unsigned int opcao;
-  // Criar as duas listas que serão utilizadas para armazenar, produtos e usuários.
-
-  Lista * listaProdutos = iniciaLista();
-  Lista * listaUsuarios = iniciaLista();
+  
+  // Criar duas listas com dados se houver arquivos com dados armazenados ou NULL se não encontrados.
+  Lista * listaProdutos = lerArquivoProdutos(PATCHPRODUTOS);
+  Lista * listaUsuarios = lerArquivoUsuarios(PATCHUSUARIOS);
   
   while(1){
     limpaConsole();
