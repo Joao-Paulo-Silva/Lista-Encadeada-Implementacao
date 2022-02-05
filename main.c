@@ -2,6 +2,10 @@
 #include "lista/lista.h"
 #include "view/telaPrincipal.h"
 
+#define PATCHPRODUTOS "model/arquivos/pdt.bn"
+#define PATCHUSUARIOS "model/arquivos/user.bn"
+
+
 // Main iniciar o programa chamando as funções.
 int main(void) {
   unsigned int opcao;
@@ -11,7 +15,7 @@ int main(void) {
   Lista * listaUsuarios = iniciaLista();
   
   while(1){
-    system("clear");
+    limpaConsole();
     opcao = menuInicial();
     switch(opcao){
       case 1:
@@ -27,7 +31,7 @@ int main(void) {
           }
            break;
           case 2:
-            system("clear");
+            limpaConsole();
             printProdutos(listaProdutos, length(listaProdutos));
           break;
           case 3:
@@ -48,7 +52,7 @@ int main(void) {
             }
           break;
           case 2:
-            system("clear");
+            limpaConsole();
             printUsuarios(listaUsuarios, length(listaUsuarios));
           break;
           case 3:
@@ -57,6 +61,8 @@ int main(void) {
         }
       break;
       case 3:
+        if(length(listaProdutos) > 0 || length(listaUsuarios) > 0)
+          telaSalvar(listaProdutos, listaUsuarios, PATCHPRODUTOS, PATCHUSUARIOS);
         if(listaProdutos != NULL)
           deletaListaDadosAlocados(listaProdutos);
         if(listaUsuarios != NULL)
