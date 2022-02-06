@@ -12,7 +12,7 @@ Ir para a biblioteca [clique aqui!](../control/arquivo.h)
 bool gravaUsuarios(Lista * listaUsuarios, char * patch);
 ```
 
-
+Função ``gravaUsuarios`` salvar uma lista de usuários em um arquivo binário, retorna ``verdadeiro`` se houver sucesso e ``falso`` se obter erros. recebe como parâmetro uma lista e o caminho do arquivo.
 
 ---
 
@@ -20,7 +20,7 @@ bool gravaUsuarios(Lista * listaUsuarios, char * patch);
 bool gravaProdutos(Lista * listaProdutos, char * patch);
 ```
 
-
+Função ``gravaProdutos`` salvar uma lista de produtos em um arquivo binário, retorna ``verdadeiro`` se houver sucesso e ``falso`` se obter erros. recebe como parâmetro uma lista e o caminho do arquivo.
 
 ---
 
@@ -28,7 +28,7 @@ bool gravaProdutos(Lista * listaProdutos, char * patch);
 Lista * lerArquivoProdutos(char * patch);
 ```
 
-
+Função ``lerArquivoProdutos`` ler um arquivo binário a partir do caminho, adiciona os ``Produtos`` dentro do arquivo em uma lista encadeada e retorna a lista ou NULL se houver erros no arquivo ou o mesmo não existir. 
 
 ---
 
@@ -36,6 +36,7 @@ Lista * lerArquivoProdutos(char * patch);
 Lista * lerArquivoUsuarios(char * patch);
 ```
 
+Função ``lerArquivoUsuarios`` ler um arquivo binário a partir do caminho, adiciona os ``Usuario`` dentro do arquivo em uma lista encadeada e retorna a lista ou NULL se houver erros no arquivo ou o mesmo não existir. 
 
 
 ---
@@ -55,7 +56,7 @@ Go to the library [click here!](../control/arquivo.h)
 bool gravaUsuarios(Lista * listaUsuarios, char * patch);
 ```
 
-
+Function ``gravaUsuarios`` saves a list of users to a binary file, returns ``true`` on success and ``false`` on errors. takes as a parameter a list and the path of the file.
 
 ---
 
@@ -63,7 +64,7 @@ bool gravaUsuarios(Lista * listaUsuarios, char * patch);
 bool gravaProdutos(Lista * listaProdutos, char * patch);
 ```
 
-
+Function ``gravaProdutos`` saves a list of products to a binary file, returns ``true`` if successful and ``false`` if errors. takes as a parameter a list and the path of the file.
 
 ---
 
@@ -71,7 +72,7 @@ bool gravaProdutos(Lista * listaProdutos, char * patch);
 Lista * lerArquivoProdutos(char * patch);
 ```
 
-
+``lerArquivoProdutos`` function reads a binary file from the path, adds the ``Produto`` inside the file in a linked list and returns the list or NULL if there are errors in the file or it doesn't exist.
 
 ---
 
@@ -79,6 +80,6 @@ Lista * lerArquivoProdutos(char * patch);
 Lista * lerArquivoUsuarios(char * patch);
 ```
 
-
+``lerArquivoUsuarios`` function reads a binary file from the path, adds the ``Usuario`` inside the file in a linked list and returns the list or NULL if there are errors in the file or the file does not exist.
 
 ---
