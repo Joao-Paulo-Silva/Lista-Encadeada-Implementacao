@@ -14,13 +14,13 @@ int main(void) {
   Lista * listaProdutos = lerArquivoProdutos(PATCHPRODUTOS);
   Lista * listaUsuarios = lerArquivoUsuarios(PATCHUSUARIOS);
   
-  while(1){
+  while(1){ // Início do while
     limpaConsole();
     opcao = menuInicial();
-    switch(opcao){
+    switch(opcao){ // Início do switch
       case 1:
         opcao = produtoMenu();
-        switch(opcao){
+        switch(opcao){ // Início do switch
           case 1:
           while(1){
             listaProdutos = addItemLista(listaProdutos, inserirProduto());
@@ -29,7 +29,7 @@ int main(void) {
               break;
             }
           }
-           break;
+          break;
           case 2:
             limpaConsole();
             printProdutos(listaProdutos, length(listaProdutos));
@@ -37,11 +37,11 @@ int main(void) {
           case 3:
            listaProdutos = buscaTelaProduto(listaProdutos);
           break;
-        }
+        } // Fim do switch
       break;
       case 2:
         opcao = usuarioMenu();
-        switch(opcao){
+        switch(opcao){ // Início do switch
           case 1:
             while(1){
               listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
@@ -58,7 +58,7 @@ int main(void) {
           case 3:
            listaUsuarios = buscaTelaUsuario(listaUsuarios);
           break;
-        }
+        } // Fim do switch
       break;
       case 3:
         if(length(listaProdutos) > 0 || length(listaUsuarios) > 0)
@@ -69,6 +69,6 @@ int main(void) {
           deletaListaDadosAlocados(listaUsuarios);
         positionPrint(0, 10);
         return EXIT_SUCCESS;
-    }  
-  }  
+    } // Fim do switch
+  } // Fim do while
 }
