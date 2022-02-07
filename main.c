@@ -8,7 +8,10 @@
 
 // Main iniciar o programa chamando as funções.
 int main(void) {
+
   unsigned int opcao;
+  // Variável booleana para verificar se a interface de salvamento será usada.
+  bool alteracao = false;
   
   // Criar duas listas com dados se houver arquivos com dados armazenados ou NULL se não encontrados.
   Lista * listaProdutos = lerArquivoProdutos(PATCHPRODUTOS);
@@ -29,6 +32,8 @@ int main(void) {
               break;
             }
           }
+          // Define true para marcar que houve alteração na lista, para abrir a opção de salvar ao usuário tentar sair. 
+          alteracao = true;
           break;
           case 2:
             limpaConsole();
@@ -50,6 +55,8 @@ int main(void) {
                 break;
               }
             }
+            // Define true para marcar que houve alteração na lista, para abrir a opção de salvar ao usuário tentar sair. 
+            alteracao = true; 
           break;
           case 2:
             limpaConsole();
@@ -61,7 +68,7 @@ int main(void) {
         } // Fim do switch
       break;
       case 3:
-        if(length(listaProdutos) > 0 || length(listaUsuarios) > 0)
+        if((length(listaProdutos) > 0 || length(listaUsuarios) > 0) && alteracao)
           telaSalvar(listaProdutos, listaUsuarios, PATCHPRODUTOS, PATCHUSUARIOS);
         if(listaProdutos != NULL)
           deletaListaDadosAlocados(listaProdutos);
