@@ -1,8 +1,8 @@
 #ifndef ARQUIVO_H
 #define ARQUIVO_H
 
-#include <stdbool.h>
-#include <stdio.h>
+#include <stdbool.h>  // include para poder utilizar o tipo booleano.
+#include <stdio.h>    // include de output para a manipulação de arquivos.
 #include "../model/produto.h"
 #include "../model/usuario.h"
 #include "../lista/lista.h"
