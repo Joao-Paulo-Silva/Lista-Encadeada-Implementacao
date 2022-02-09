@@ -8,7 +8,7 @@ Produto * buscaProduto(Lista * listaProdutos, char * nome){
 Lista * aux = listaProdutos;
   while(aux != NULL){
     Produto * pdt = (Produto *) aux->tipoGenerico;
-    if(strcmp(pdt->nome, nome) == 0){
+    if(strcmp(pdt->nome, nome) == 0){ // Verificar se os nomes são iguais, com a função <strcmp> da biblioteca <string.h>.
       return pdt;
     }
     aux = aux->proximo;
@@ -24,7 +24,7 @@ Usuario * buscaUsuarios(Lista * listaUsuarios, char * nome){
   Lista * aux = listaUsuarios;
   while(aux != NULL){
     Usuario * user = (Usuario *) aux->tipoGenerico;
-    if(strcmp(user->nome, nome) == 0){
+    if(strcmp(user->nome, nome) == 0){  // Verificar se os nomes são iguais, com a função <strcmp> da biblioteca <string.h>.
       return user;
     }
     aux = aux->proximo;

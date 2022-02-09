@@ -3,14 +3,17 @@
 // Funções para gravar uma lista de um determinado tipo, recebe como parâmetro o caminho e a lista, retorna um booleano  verdadeiro se houver sucesso ao gravar e falso se houver erros.
 bool gravaUsuarios(Lista * listaUsuarios, char * patch) {
   int tamanhoLista;
-  if ((tamanhoLista = length(listaUsuarios)) > 0) {
+  // Verifica se a lista possui dados.
+  if ((tamanhoLista = length(listaUsuarios)) > 0) { 
     FILE * arquivo;
+     // cria ou sobrescreve o arquivo binário no caminho informado com “wb”
     if ((arquivo = fopen(patch, "wb")) == NULL)
-      return false;
+      return false; // Retorna False se houver erros ao criar o arquivo.
     for (int i = 0; i < tamanhoLista; i++) {
-      fwrite((Usuario *) get(listaUsuarios, i), sizeof (Usuario), 1, arquivo);
+      // Grava um tipo Usuario, utilizando o tamanho do mesmo com sizeof e a quantidade de dados por escrita.
+      fwrite((Usuario *) get(listaUsuarios, i), sizeof (Usuario), 1, arquivo); 
     }
-    fclose(arquivo);
+    fclose(arquivo); // Fecha o arquivo.
     return true;
   } else {
     return false;
@@ -21,15 +24,17 @@ bool gravaUsuarios(Lista * listaUsuarios, char * patch) {
 bool gravaProdutos(Lista * listaProdutos, char * patch) {
 
   int tamanhoLista;
-  if ((tamanhoLista = length(listaProdutos)) > 0) {
+  // Verifica se a lista possui dados.
+  if ((tamanhoLista = length(listaProdutos)) > 0) { 
     FILE * arquivo;
-    if ((arquivo = fopen(patch, "wb")) == NULL)
-      return false;
+    // cria ou sobrescreve o arquivo binário no caminho informado com “wb”
+    if ((arquivo = fopen(patch, "wb")) == NULL) 
+      return false; // Retorna False se houver erros ao criar o arquivo.
     for (int i = 0; i < tamanhoLista; i++) {
-      fwrite((Produto *) get(listaProdutos, i), sizeof (Produto), 1, arquivo);
-      fseek(arquivo, (1 + i) * sizeof (Produto), SEEK_SET);
+      // Grava um tipo Produto, utilizando o tamanho do mesmo com sizeof e a quantidade de dados por escrita.
+      fwrite((Produto *) get(listaProdutos, i), sizeof (Produto), 1, arquivo); 
     }
-    fclose(arquivo);
+    fclose(arquivo);  // Fecha o arquivo.
     return true;
   } else {
     return false;
@@ -41,20 +46,20 @@ Lista * lerArquivoProdutos(char * patch) {
   int i = 0;
   Lista * lista = iniciaLista();
   FILE * arquivo;
-  if ((arquivo = fopen(patch, "rb")) == NULL)
+  if ((arquivo = fopen(patch, "rb")) == NULL) // Abre arquivo usando "rb", se houver erro retorna NULL.
     return NULL;
   while (1){
-    Produto * pdt = alocaProduto();
-    fseek(arquivo, i * sizeof (Produto), SEEK_SET);
+    Produto * pdt = alocaProduto(); // Aloca um produto para receber os dados do arquivo.
+    // Ler a quantidade de bytes informados e insere na no tipo Produto, se a leitura retorna 0 bytes desaloca a variável Produto e para o loop.
     if (fread(pdt, sizeof (Produto), 1, arquivo) == 0) {
       free(pdt);
       break;
-    } else {
+    } else { // Se não adicionar o Produto a lista.
       lista = addItemLista(lista, pdt);
       i++;
     }
   }
-  fclose(arquivo);
+  fclose(arquivo); // Fecha o arquivo.
   return lista;
 }
 
@@ -63,19 +68,19 @@ Lista * lerArquivoUsuarios(char * patch){
   int i = 0;
   Lista * lista = iniciaLista();
   FILE * arquivo;
-  if ((arquivo = fopen(patch, "rb")) == NULL)
+  if ((arquivo = fopen(patch, "rb")) == NULL) // Abre arquivo usando "rb", se houver erro retorna NULL.
     return NULL;
   while (1){
-    Usuario * user = alocaUsuario();
-    fseek(arquivo, i * sizeof(Usuario), SEEK_SET);
+    Usuario * user = alocaUsuario();// Aloca um usuário para receber os dados do arquivo.
+    // Ler a quantidade de bytes informados e insere na no tipo Usuario, se a leitura retorna 0 bytes desaloca a variável Usuario e para o loop.
     if (fread(user, sizeof(Usuario), 1, arquivo) == 0) {
       free(user);
       break;
-    } else {
+    } else { // Se não adicionar o Produto a lista.
       lista = addItemLista(lista, user);
       i++;
     }
   }
-  fclose(arquivo);
+  fclose(arquivo);  // Fecha o arquivo.
   return lista;
 }
