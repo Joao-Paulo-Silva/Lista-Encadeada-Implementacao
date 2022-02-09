@@ -158,6 +158,14 @@ Nessas telas o usuário pode informar um nome para efetuar a pesquisa.
 
 A tela de resultados mostra as informações encontradas e oferece opção para deletar o dado da lista.
 
+--- 
+
+##### **Tela Salvar:**
+
+![alt text ><](img/telaSalvar.png)
+
+Salva os dados da memória ram em arquivo, sobrescrevendo o arquivo anterior
+
 ---
 
 ### Conclusão:
