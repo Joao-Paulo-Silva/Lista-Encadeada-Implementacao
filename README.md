@@ -17,8 +17,7 @@
 ## Português
 
 #### ``@author João Paulo``, Link para executar o projeto no [replit.com](https://replit.com/@JooPaulodaSilv1/ListaEncadeadaExemplo).
-
-Este projeto demonstra a criação e utilização de uma lista encadeada para tipos genéricos com a linguagem c, no qual utiliza-se de duas ``struct`` e a mesma lista para armazená-las. Para a criação da lista sem a necessidade de um tipo específico nos nós, os mesmos armazenam os endereços com uma variável não definida(``void``). 
+Este projeto demonstra a criação e utilização de uma lista encadeada para tipos genéricos com a linguagem c, no qual utiliza-se de duas ``struct`` e a mesma lista para armazená-las, o projeto está baseado no padrão de projeto de software MVC(Model-View-Controller). Para a criação da lista sem a necessidade de um tipo específico nos nós, os mesmos armazenam os endereços com uma variável não definida(``void``). 
 
 A lista encadeada com tipos genéricos deste projeto usa-se de ponteiro ``*`` e utiliza-se de bibliotecas customizadas ``Exemplo.h``, para uma melhor organização do algoritmo.
 
