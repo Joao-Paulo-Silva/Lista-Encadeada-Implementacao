@@ -9,7 +9,7 @@
 // Main iniciar o programa chamando as funções.
 int main(void) {
 
-  unsigned int opcao;
+  unsigned int opcao, variavelControle;
   // Variável booleana para verificar se a interface de salvamento será usada.
   bool alteracao = false;
   
@@ -40,7 +40,10 @@ int main(void) {
             printProdutos(listaProdutos, length(listaProdutos));
           break;
           case 3:
-           listaProdutos = buscaTelaProduto(listaProdutos);
+            variavelControle = length(listaProdutos);
+            listaProdutos = buscaTelaProduto(listaProdutos);
+            if(variavelControle != length(listaProdutos))
+              alteracao = true; 
           break;
         } // Fim do switch
       break;
@@ -63,7 +66,10 @@ int main(void) {
             printUsuarios(listaUsuarios, length(listaUsuarios));
           break;
           case 3:
-           listaUsuarios = buscaTelaUsuario(listaUsuarios);
+            variavelControle = length(listaUsuarios);
+            listaUsuarios = buscaTelaUsuario(listaUsuarios);
+            if(variavelControle != length(listaUsuarios))
+              alteracao = true; 
           break;
         } // Fim do switch
       break;
