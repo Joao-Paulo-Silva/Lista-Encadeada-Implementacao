@@ -1,3 +1,8 @@
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
+
 #ifndef  USUARIO_H
 #define  USUARIO_H
 

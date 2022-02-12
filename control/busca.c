@@ -16,6 +16,11 @@ Lista * aux = listaProdutos;
   return NULL;
 }
 
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
+
 /* 
  * Função buscaUsuarios retorna um  endereço de um Usuario, se encontrado na lista
  * de usuários a partir do nome.

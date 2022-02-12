@@ -1,3 +1,8 @@
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
+
 #include "produto.h"
 
 //Alocar um produto dinamicamente, retorna um PRODUTO.

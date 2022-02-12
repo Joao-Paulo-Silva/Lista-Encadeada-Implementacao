@@ -207,6 +207,11 @@ void printProdutos(Lista *listaProdutos, int sizeProdutos){
   }
   getchar();
 }
+
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
 // Função para printar uma lista de usuários.
 void printUsuarios(Lista *listaUsuarios, int sizeUsuarios){
   limpaConsole();

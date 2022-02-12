@@ -62,6 +62,10 @@ Lista * lerArquivoProdutos(char * patch) {
   fclose(arquivo); // Fecha o arquivo.
   return lista;
 }
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
 
 // Funções leem arquivos a partir do caminho, pegando os dados de  determinados tipos.
 Lista * lerArquivoUsuarios(char * patch){

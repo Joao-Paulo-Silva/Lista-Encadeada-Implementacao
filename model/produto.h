@@ -1,3 +1,7 @@
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
 #ifndef  PRODUTO_H
 #define  PRODUTO_H
 

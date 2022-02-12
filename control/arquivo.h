@@ -1,3 +1,7 @@
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
 #ifndef ARQUIVO_H
 #define ARQUIVO_H
 

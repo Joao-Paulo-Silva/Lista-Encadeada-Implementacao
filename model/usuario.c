@@ -1,3 +1,7 @@
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
 #include "usuario.h"
 
 //Alocar um usuário dinamicamente, retorna um Usuario.

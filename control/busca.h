@@ -1,3 +1,8 @@
+/*
+*  @copyright João Paulo. 
+*  Github: https://github.com/Joao-Paulo-Silva
+*/
+
 #ifndef  BUSCA_H
 #define  BUSCA_H
 
