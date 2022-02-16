@@ -12,18 +12,11 @@ Lista * alocaLista(){
 }
 
 // Adiciona um novo tipo ao início da lista.
-bool addItemLista(Lista *lista, void * endTipo){
-  if(endTipo != NULL){
-    Lista * itemNovo = alocaLista();
-    if(itemNovo != NULL){
-      itemNovo->tipoGenerico = endTipo;
-      itemNovo->proximo = lista == NULL ? NULL : lista;
-      lista = itemNovo;
-      return true;
-    }else 
-      return false;
-  }else
-    return false;
+Lista * addItemLista(Lista *lista, void * endTipo){
+  Lista * itemNovo = alocaLista();
+  itemNovo->tipoGenerico = endTipo;
+  itemNovo->proximo = lista == NULL ? NULL : lista; 
+  return itemNovo;
 }
 
 // Remove um item da lista.
