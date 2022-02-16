@@ -30,7 +30,7 @@ int main(void) {
         switch(opcao){ // Início do switch
           case 1:
           while(1){
-            listaProdutos = addItemLista(listaProdutos, inserirProduto());
+            addItemLista(listaProdutos, inserirProduto());
             printPrecioneEnter();
             if(getchar() != '\n'){
               break;
@@ -56,7 +56,7 @@ int main(void) {
         switch(opcao){ // Início do switch
           case 1:
             while(1){
-              listaUsuarios = addItemLista(listaUsuarios, inserirUsuario());
+              addItemLista(listaUsuarios, inserirUsuario());
               printPrecioneEnter();
               if(getchar() != '\n'){
                 break;
