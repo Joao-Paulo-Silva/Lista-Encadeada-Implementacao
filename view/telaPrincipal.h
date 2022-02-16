@@ -36,8 +36,8 @@ void printUsuarios(Lista *listaUsuarios, int sizeUsuarios);
 void printPrecioneEnter();
 
 // Funções de busca contém a tela de pesquisa e mostra os resultados, retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
-Lista * buscaTelaProduto(Lista *listaProdutos);
-Lista * buscaTelaUsuario(Lista *listaUsuarios);
+Produto * buscaTelaProduto(Lista *listaProdutos);
+Usuario * buscaTelaUsuario(Lista *listaUsuarios);
 
 // Interface com opção de salvar ou sair.
 void telaSalvar(Lista * listaProdutos, Lista * listaUsuario, char * patchProdutos, char * patchUsuario);

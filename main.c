@@ -47,7 +47,7 @@ int main(void) {
             variavelControle = length(listaProdutos);
             Produto * prodt = buscaTelaProduto(listaProdutos);
             if(prodt != NULL)
-              free(user);
+              free(prodt);
             if(variavelControle != length(listaProdutos))
               alteracao = true; 
           break;

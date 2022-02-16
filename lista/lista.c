@@ -30,12 +30,12 @@ void * removeItemLista(Lista *lista, void * endTipo){
           lista = NULL;
         lista = atual->proximo;
         void * dadoRemovido = atual->tipoGenerico;
-        free(atual)
+        free(atual);
         return dadoRemovido;
       }else{
         anterior->proximo = atual->proximo;
         void * dadoRemovido = atual->tipoGenerico;
-        free(atual)
+        free(atual);
         return dadoRemovido;
       }
     }
