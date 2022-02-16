@@ -12,35 +12,44 @@ Lista * alocaLista(){
 }
 
 // Adiciona um novo tipo ao início da lista.
-Lista * addItemLista(Lista *lista, void * endTipo){
-  Lista * itemNovo = alocaLista();
-  itemNovo->tipoGenerico = endTipo;
-  itemNovo->proximo = lista == NULL ? NULL : lista; 
-  return itemNovo;
+bool addItemLista(Lista *lista, void * endTipo){
+  if(endTipo != NULL){
+    Lista * itemNovo = alocaLista();
+    if(itemNovo != NULL){
+      itemNovo->tipoGenerico = endTipo;
+      itemNovo->proximo = lista == NULL ? NULL : lista;
+      lista = itemNovo;
+      return true;
+    }else 
+      return false;
+  }else
+    return false;
 }
 
 // Remove um item da lista.
-Lista * removeItemLista(Lista *lista, void * endTipo){
+void * removeItemLista(Lista *lista, void * endTipo){
   Lista * anterior = NULL, *atual;
   atual = lista;
   do{
     if(atual->tipoGenerico == endTipo){
       if(anterior == NULL){
         if(atual->proximo == NULL)
-          return NULL;
-         lista = atual->proximo;
-        free(atual);
-        return lista;
+          lista = NULL;
+        lista = atual->proximo;
+        void * dadoRemovido = atual->tipoGenerico;
+        free(atual)
+        return dadoRemovido;
       }else{
         anterior->proximo = atual->proximo;
-        free(atual);
-        return lista;
+        void * dadoRemovido = atual->tipoGenerico;
+        free(atual)
+        return dadoRemovido;
       }
     }
     anterior = atual;
     atual = atual->proximo;
   }while(atual != NULL);
-  return lista;
+  return NULL;
 }
 
 // Deleta todos os itens da lista liberando da memória.
