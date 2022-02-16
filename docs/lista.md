@@ -40,18 +40,18 @@ A função ``alocaLista()`` retorna uma ``Lista`` alocada dinamicamente.
 ---
 
 ```C
-Lista * addItemLista(Lista *lista, void * endTipo);
+bool addItemLista(Lista *lista, void * endTipo);
 ```
 
-A função ``addItemLista`` alocar um nó(``Lista``), e adiciona o último nó da lista ao endereço do próximo dentro do novo nó retornando a o novo nó para atualizar a lista.
+A função ``addItemLista`` alocar um nó(``Lista``), e adiciona o último nó da lista ao endereço do próximo dentro do novo nó retornando verdadeiro se for inserido ou falso se houver erros.
 
 ---
 
 ```C
-Lista * removeItemLista(Lista *lista, void * endTipo);
+void * removeItemLista(Lista *lista, void * endTipo);
 ```
 
-A função ``removeItemLista`` remove um nó da lista que contenha um tipo genérico igual ao enviado como parâmetro da função, retornado a nova ``Lista`` para atualização.
+A função ``removeItemLista`` remove um nó da lista que contenha um tipo genérico igual ao enviado como parâmetro da função, retornado o dado removido.
 
 ---
 
