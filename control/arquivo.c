@@ -54,7 +54,7 @@ Lista * lerArquivoProdutos(char * patch) {
       free(pdt);
       break;
     } else { // Se não adicionar o Produto a lista.
-      addItemLista(lista, pdt);
+      lista = addItemLista(lista, pdt);
     }
   }
   fclose(arquivo); // Fecha o arquivo.
@@ -78,7 +78,7 @@ Lista * lerArquivoUsuarios(char * patch){
       free(user);
       break;
     } else { // Se não adicionar o Produto a lista.
-      addItemLista(lista, user);
+      lista = addItemLista(lista, user);
     }
   }
   fclose(arquivo);  // Fecha o arquivo.
