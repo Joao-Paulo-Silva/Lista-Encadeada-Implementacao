@@ -274,7 +274,7 @@ void printPrecioneEnter(){
 /* Função de busca contém a tela de pesquisa e mostra os resultados, 
  * retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
  */
-Lista * buscaTelaProduto(Lista *listaProdutos){
+Produto * buscaTelaProduto(Lista *listaProdutos){
   limpaConsole();
   setbuf(stdin, NULL);
   Produto * produto;
@@ -327,7 +327,7 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
       }while(op > 2);
       setbuf(stdin, NULL);
       if(op == 2){
-        return removeItemLista(listaProdutos, produto);
+        return (produto *) removeItemLista(listaProdutos, produto);
       }
   }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
@@ -337,14 +337,14 @@ Lista * buscaTelaProduto(Lista *listaProdutos){
            "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
     getchar();
   }
-  return listaProdutos;
+  return NULL;
 
 }
 
 /* Função de busca contém a tela de pesquisa e mostra os resultados, 
  * retorna uma lista, para atualizar se o nó for deletado após a pesquisa.
  */
-Lista * buscaTelaUsuario(Lista *listaUsuarios){
+Usuario * buscaTelaUsuario(Lista *listaUsuarios){
   limpaConsole();
   setbuf(stdin, NULL);
   unsigned int op;
@@ -389,7 +389,7 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
     }while(op > 2);
     setbuf(stdin, NULL);
     if(op == 2){
-      return removeItemLista(listaUsuarios, usuario);
+      return (Usuario *) removeItemLista(listaUsuarios, usuario);
     }
   }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
@@ -399,7 +399,7 @@ Lista * buscaTelaUsuario(Lista *listaUsuarios){
            "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\n");
     getchar();
   }
-  return listaUsuarios;
+  return NULL;
 }
 
 // Interface com opção de salvar ou sair.
