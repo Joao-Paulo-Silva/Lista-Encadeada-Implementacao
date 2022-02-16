@@ -327,7 +327,7 @@ Produto * buscaTelaProduto(Lista *listaProdutos){
       }while(op > 2);
       setbuf(stdin, NULL);
       if(op == 2){
-        return (produto *) removeItemLista(listaProdutos, produto);
+        return (Produto *) removeItemLista(listaProdutos, produto);
       }
   }else{
     printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓\n"
