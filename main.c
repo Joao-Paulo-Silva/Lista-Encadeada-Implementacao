@@ -45,9 +45,7 @@ int main(void) {
           break;
           case 3:
             variavelControle = length(listaProdutos);
-            Produto * prodt = buscaTelaProduto(listaProdutos);
-            if(prodt != NULL)
-              free(prodt);
+           listaProdutos = buscaTelaProduto(listaProdutos);
             if(variavelControle != length(listaProdutos))
               alteracao = true; 
           break;
@@ -73,9 +71,7 @@ int main(void) {
           break;
           case 3:
             variavelControle = length(listaUsuarios);
-            Usuario * user = buscaTelaUsuario(listaUsuarios);
-            if(user != NULL)
-              free(user);
+            listaUsuarios = buscaTelaUsuario(listaUsuarios);
             if(variavelControle != length(listaUsuarios))
               alteracao = true; 
           break;
