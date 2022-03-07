@@ -19,4 +19,5 @@ bool gravaProdutos(Lista * listaProdutos, char * patch);
 Lista * lerArquivoProdutos(char * patch);
 Lista * lerArquivoUsuarios(char * patch);
 
+
 #endif /* ARQUIVO_H */

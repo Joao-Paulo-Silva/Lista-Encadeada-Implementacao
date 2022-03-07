@@ -70,7 +70,6 @@ unsigned int usuarioMenu(){
 Produto * inserirProduto(){
   setbuf(stdin, NULL);
   Produto * produto = alocaProduto();
-  Validade data;
   limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                   PRODUTO                 ┃"
@@ -125,7 +124,6 @@ Produto * inserirProduto(){
 Usuario * inserirUsuario(){
   setbuf(stdin, NULL);
   Usuario * usuario = alocaUsuario();
-  Validade data;
   limpaConsole();
   printf("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓" 
        "\n┃                   USUÁRIO                 ┃"

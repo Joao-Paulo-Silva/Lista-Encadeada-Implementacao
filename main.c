@@ -13,7 +13,8 @@
 // Main iniciar o programa chamando as funções.
 int main(void) {
 
-  unsigned int opcao, variavelControle;
+  unsigned short int opcao;
+  int variavelControle;
   // Variável booleana para verificar se a interface de salvamento será usada.
   bool alteracao = false;
   
