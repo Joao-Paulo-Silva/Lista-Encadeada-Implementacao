@@ -1,4 +1,4 @@
-# Lista encadeada em liguagem C 
+# Lista encadeada em linguagem C 
 
 ## Selecione o Idioma / Select the language:
 
